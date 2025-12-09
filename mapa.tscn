@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cakdty1swy37"]
+[gd_scene load_steps=22 format=4 uid="uid://cakdty1swy37"]
 
 [ext_resource type="Texture2D" uid="uid://sy8vpq1o6qie" path="res://RF_Catacombs_v1.0/mainlevbuild.png" id="1_2jh14"]
 [ext_resource type="Texture2D" uid="uid://1jlonmh76eh8" path="res://RF_Catacombs_v1.0/decorative.png" id="2_wan0n"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdjsk8cruhq35" path="res://RF_Catacombs_v1.0/torch_2.png" id="4_ltv3l"]
 [ext_resource type="Texture2D" uid="uid://ddaxtsmfhxsr2" path="res://RF_Catacombs_v1.0/torch_3.png" id="5_w30at"]
 [ext_resource type="Texture2D" uid="uid://rnusdd0b1cwy" path="res://RF_Catacombs_v1.0/torch_4.png" id="6_2eut3"]
+[ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://pj_playable.tscn" id="7_auc41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70f7c"]
 texture = ExtResource("1_2jh14")
@@ -4303,3 +4304,6 @@ tile_set = SubResource("TileSet_auc41")
 texture_filter = 1
 tile_map_data = PackedByteArray("AAANAAoAAQACAAEAAAAUAAoAAQACAAEAAAANAA4AAQADAAEAAAANAA8AAQADAAIAAAANABAAAQADAAMAAAANABMAAQABAAEAAAANABQAAQABAAIAAAANABUAAQABAAMAAAAUABMAAQAEAAEAAAAUABQAAQAEAAIAAAAUABUAAQAEAAMAAAAUAA4AAQABAAEAAAAUAA8AAQABAAIAAAAUABAAAQABAAMAAAA=")
 tile_set = SubResource("TileSet_k4701")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_auc41")]
+position = Vector2(75, 306)
