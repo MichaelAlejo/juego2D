@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Proyecto de Recerca"
+config/name="The Dungeon Runner (TdR)"
 run/main_scene="uid://cakdty1swy37"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://logo.png"
 
 [input]
 

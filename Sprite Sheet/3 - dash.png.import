@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl5ftlmfwhj1n"
-path="res://.godot/imported/7. Hit 48 x 48.png-65bb691d0b884099a9236b1e1c1d6b10.ctex"
+uid="uid://c6pp03d727vry"
+path="res://.godot/imported/3 - dash.png-5b4812f183343fd759157d413fdeed93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheet/7. Hit 48 x 48.png"
-dest_files=["res://.godot/imported/7. Hit 48 x 48.png-65bb691d0b884099a9236b1e1c1d6b10.ctex"]
+source_file="res://Sprite Sheet/3 - dash.png"
+dest_files=["res://.godot/imported/3 - dash.png-5b4812f183343fd759157d413fdeed93.ctex"]
 
 [params]
 

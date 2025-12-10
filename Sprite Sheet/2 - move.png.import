@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q7787bw264q"
-path="res://.godot/imported/1. Idle 48 x 48.png-646d80a255684b65bb0c76cd9f415109.ctex"
+uid="uid://cvdg45hy65dbo"
+path="res://.godot/imported/2 - move.png-8eb93992a286fa006f8cdf928230b1e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheet/1. Idle 48 x 48.png"
-dest_files=["res://.godot/imported/1. Idle 48 x 48.png-646d80a255684b65bb0c76cd9f415109.ctex"]
+source_file="res://Sprite Sheet/2 - move.png"
+dest_files=["res://.godot/imported/2 - move.png-8eb93992a286fa006f8cdf928230b1e3.ctex"]
 
 [params]
 

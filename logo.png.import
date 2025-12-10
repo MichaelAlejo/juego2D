@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbgddlmoj62w6"
-path="res://.godot/imported/3. Jump 48 x 48.png-201cb2a740208949cb2255b6c293992b.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://bty7nueqakyy3"
+valid=false
 
 [deps]
 
-source_file="res://Sprite Sheet/3. Jump 48 x 48.png"
-dest_files=["res://.godot/imported/3. Jump 48 x 48.png-201cb2a740208949cb2255b6c293992b.ctex"]
+source_file="res://logo.svg"
 
 [params]
 
@@ -38,3 +34,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

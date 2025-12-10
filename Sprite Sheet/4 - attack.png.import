@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b814s7xm0ug1d"
-path="res://.godot/imported/8. Death 76 x 48.png-9365ffdbe040512de662ca3d0768bb9c.ctex"
+uid="uid://dims464atjys1"
+path="res://.godot/imported/4 - attack.png-eea0e9d14ab84e07abcb4ce071023f56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheet/8. Death 76 x 48.png"
-dest_files=["res://.godot/imported/8. Death 76 x 48.png-9365ffdbe040512de662ca3d0768bb9c.ctex"]
+source_file="res://Sprite Sheet/4 - attack.png"
+dest_files=["res://.godot/imported/4 - attack.png-eea0e9d14ab84e07abcb4ce071023f56.ctex"]
 
 [params]
 
