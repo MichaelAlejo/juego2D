@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdjsk8cruhq35" path="res://RF_Catacombs_v1.0/torch_2.png" id="4_ltv3l"]
 [ext_resource type="Texture2D" uid="uid://ddaxtsmfhxsr2" path="res://RF_Catacombs_v1.0/torch_3.png" id="5_w30at"]
 [ext_resource type="Texture2D" uid="uid://rnusdd0b1cwy" path="res://RF_Catacombs_v1.0/torch_4.png" id="6_2eut3"]
-[ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://pj_playable1.tscn" id="7_auc41"]
+[ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://jugador.tscn" id="7_auc41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70f7c"]
 texture = ExtResource("1_2jh14")
