@@ -193,11 +193,6 @@ region = Rect2(336, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6jp41"]
 animations = [{
-"frames": [],
-"loop": false,
-"name": &"atack",
-"speed": 6.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oxcm1")
@@ -331,6 +326,6 @@ shape = SubResource("CapsuleShape2D_ebjds")
 texture_filter = 1
 position = Vector2(-2, 1)
 sprite_frames = SubResource("SpriteFrames_6jp41")
-animation = &"hit"
+animation = &"death"
 
 [node name="Camera2D" type="Camera2D" parent="."]
