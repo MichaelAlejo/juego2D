@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dims464atjys1"
-path="res://.godot/imported/4 - attack.png-eea0e9d14ab84e07abcb4ce071023f56.ctex"
+uid="uid://cvqyay2r0j81s"
+path="res://.godot/imported/6 - death.png-4c05a194b48f698215dd06a553f9a897.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheet/4 - attack.png"
-dest_files=["res://.godot/imported/4 - attack.png-eea0e9d14ab84e07abcb4ce071023f56.ctex"]
+source_file="res://animaciones jugador pngs/6 - death.png"
+dest_files=["res://.godot/imported/6 - death.png-4c05a194b48f698215dd06a553f9a897.ctex"]
 
 [params]
 

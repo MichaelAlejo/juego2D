@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvdg45hy65dbo"
-path="res://.godot/imported/2 - move.png-8eb93992a286fa006f8cdf928230b1e3.ctex"
+path="res://.godot/imported/2 - move.png-1204146727a8729b1c76e91a91a298d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheet/2 - move.png"
-dest_files=["res://.godot/imported/2 - move.png-8eb93992a286fa006f8cdf928230b1e3.ctex"]
+source_file="res://animaciones jugador pngs/2 - move.png"
+dest_files=["res://.godot/imported/2 - move.png-1204146727a8729b1c76e91a91a298d2.ctex"]
 
 [params]
 
