@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6pp03d727vry"
-path="res://.godot/imported/3 - dash.png-5b4812f183343fd759157d413fdeed93.ctex"
+uid="uid://cnckklckxf5r8"
+path="res://.godot/imported/5 - hit.png-1691a6908c8d781162535f3b7ec3515a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite Sheet/3 - dash.png"
-dest_files=["res://.godot/imported/3 - dash.png-5b4812f183343fd759157d413fdeed93.ctex"]
+source_file="res://animaciones jugador pngs/5 - hit.png"
+dest_files=["res://.godot/imported/5 - hit.png-1691a6908c8d781162535f3b7ec3515a.ctex"]
 
 [params]
 

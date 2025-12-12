@@ -1,11 +1,11 @@
 [gd_scene load_steps=52 format=3 uid="uid://cwn2d1ap5i74a"]
 
-[ext_resource type="Texture2D" uid="uid://bqlngeajvqji" path="res://Sprite Sheet/1 - idle.png" id="1_cvhml"]
-[ext_resource type="Texture2D" uid="uid://cvdg45hy65dbo" path="res://Sprite Sheet/2 - move.png" id="2_btb33"]
-[ext_resource type="Texture2D" uid="uid://c6pp03d727vry" path="res://Sprite Sheet/3 - dash.png" id="3_qw2bf"]
-[ext_resource type="Texture2D" uid="uid://dims464atjys1" path="res://Sprite Sheet/4 - attack.png" id="4_g5h5a"]
-[ext_resource type="Texture2D" uid="uid://cnckklckxf5r8" path="res://Sprite Sheet/5 - hit.png" id="5_o2m60"]
-[ext_resource type="Texture2D" uid="uid://cvqyay2r0j81s" path="res://Sprite Sheet/6 - death.png" id="6_hcpjn"]
+[ext_resource type="Texture2D" uid="uid://bqlngeajvqji" path="res://animaciones jugador pngs/1 - idle.png" id="1_cvhml"]
+[ext_resource type="Texture2D" uid="uid://cvdg45hy65dbo" path="res://animaciones jugador pngs/2 - move.png" id="2_btb33"]
+[ext_resource type="Texture2D" uid="uid://c6pp03d727vry" path="res://animaciones jugador pngs/3 - dash.png" id="3_qw2bf"]
+[ext_resource type="Texture2D" uid="uid://dims464atjys1" path="res://animaciones jugador pngs/4 - attack.png" id="4_g5h5a"]
+[ext_resource type="Texture2D" uid="uid://cnckklckxf5r8" path="res://animaciones jugador pngs/5 - hit.png" id="5_o2m60"]
+[ext_resource type="Texture2D" uid="uid://cvqyay2r0j81s" path="res://animaciones jugador pngs/6 - death.png" id="6_hcpjn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebjds"]
 radius = 7.0
