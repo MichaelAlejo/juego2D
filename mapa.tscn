@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://cakdty1swy37"]
+[gd_scene load_steps=8 format=4 uid="uid://cakdty1swy37"]
 
 [ext_resource type="Texture2D" uid="uid://sy8vpq1o6qie" path="res://RF_Catacombs_v1.0/mainlevbuild.png" id="1_2jh14"]
-[ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://jugador.tscn" id="2_70f7c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70f7c"]
 texture = ExtResource("1_2jh14")
@@ -3118,6 +3117,3 @@ tile_map_data = PackedByteArray("AAAEAAsAAAAMAAcAAAAEAAwAAAAMAAgAAAAEAA0AAAAMAAk
 tile_set = SubResource("TileSet_auc41")
 
 [node name="Colisiones" type="Node" parent="."]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_70f7c")]
-position = Vector2(83, 306)
