@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cwn2d1ap5i74a"]
+[gd_scene load_steps=53 format=3 uid="uid://cwn2d1ap5i74a"]
 
 [ext_resource type="Texture2D" uid="uid://bqlngeajvqji" path="res://animaciones jugador pngs/1 - idle.png" id="1_cvhml"]
 [ext_resource type="Texture2D" uid="uid://cvdg45hy65dbo" path="res://animaciones jugador pngs/2 - move.png" id="2_btb33"]
@@ -6,6 +6,31 @@
 [ext_resource type="Texture2D" uid="uid://dims464atjys1" path="res://animaciones jugador pngs/4 - attack.png" id="4_g5h5a"]
 [ext_resource type="Texture2D" uid="uid://cnckklckxf5r8" path="res://animaciones jugador pngs/5 - hit.png" id="5_o2m60"]
 [ext_resource type="Texture2D" uid="uid://cvqyay2r0j81s" path="res://animaciones jugador pngs/6 - death.png" id="6_hcpjn"]
+
+[sub_resource type="GDScript" id="GDScript_cvhml"]
+script/source = "extends CharacterBody2D
+
+@export var speed := 200
+
+func _physics_process(delta):
+	var input_vector = Vector2.ZERO
+	
+	input_vector.x = Input.get_action_strength(\"ui_right\") - Input.get_action_strength(\"ui_left\")
+	input_vector.y = Input.get_action_strength(\"ui_down\") - Input.get_action_strength(\"ui_up\")
+
+	if input_vector != Vector2.ZERO:
+		# Conversión a isométrico
+		var iso_direction = Vector2(
+			input_vector.x - input_vector.y,
+			(input_vector.x + input_vector.y) / 2
+		)
+		
+		velocity = iso_direction.normalized() * speed
+	else:
+		velocity = Vector2.ZERO
+
+	move_and_slide()
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebjds"]
 radius = 7.0
@@ -346,6 +371,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = SubResource("GDScript_cvhml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ebjds")

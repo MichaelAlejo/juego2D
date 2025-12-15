@@ -3110,6 +3110,9 @@ tile_set = SubResource("TileSet_5d3jg")
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="Suelo"]
 energy = 0.5
 
+[node name="CharacterBody2D" parent="Suelo" instance=ExtResource("2_70f7c")]
+position = Vector2(80, 310)
+
 [node name="Paredes & decoración" type="Node" parent="."]
 
 [node name="walls" type="TileMapLayer" parent="Paredes & decoración"]
@@ -3118,6 +3121,3 @@ tile_map_data = PackedByteArray("AAAEAAsAAAAMAAcAAAAEAAwAAAAMAAgAAAAEAA0AAAAMAAk
 tile_set = SubResource("TileSet_auc41")
 
 [node name="Colisiones" type="Node" parent="."]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_70f7c")]
-position = Vector2(83, 306)
