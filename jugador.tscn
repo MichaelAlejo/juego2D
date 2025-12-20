@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cwn2d1ap5i74a"]
+[gd_scene load_steps=55 format=3 uid="uid://cwn2d1ap5i74a"]
 
 [ext_resource type="Texture2D" uid="uid://bqlngeajvqji" path="res://animaciones jugador pngs/1 - idle.png" id="1_cvhml"]
 [ext_resource type="Texture2D" uid="uid://cvdg45hy65dbo" path="res://animaciones jugador pngs/2 - move.png" id="2_btb33"]
@@ -10,7 +10,7 @@
 [sub_resource type="GDScript" id="GDScript_cvhml"]
 script/source = "extends CharacterBody2D
 
-@export var speed := 200
+@export var speed := 60
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -33,8 +33,8 @@ func _physics_process(delta):
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebjds"]
-radius = 7.0
-height = 38.0
+radius = 4.0
+height = 24.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xwd11"]
 atlas = ExtResource("1_cvhml")
@@ -370,6 +370,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_cvhml"]
+offsets = PackedFloat32Array(0, 0.7)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_btb33"]
+gradient = SubResource("Gradient_cvhml")
+width = 120
+height = 120
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = SubResource("GDScript_cvhml")
 
@@ -384,3 +395,10 @@ animation = &"1_idle"
 frame_progress = 0.62328994
 
 [node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.77133155, 38.54468)
+zoom = Vector2(2.5, 2.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(1.6299095, 1.7029082)
+energy = 1.5
+texture = SubResource("GradientTexture2D_btb33")
