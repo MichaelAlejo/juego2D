@@ -378,7 +378,9 @@ shape = SubResource("CapsuleShape2D_ebjds")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(0.55325156, 0.5367631)
 sprite_frames = SubResource("SpriteFrames_6jp41")
-animation = &"5_hit "
+animation = &"1_idle"
+frame_progress = 0.62328994
 
 [node name="Camera2D" type="Camera2D" parent="."]
