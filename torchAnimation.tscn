@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://6fp3wlmj8kfm"]
+
+[ext_resource type="Texture2D" uid="uid://klr75kjxj4os" path="res://RF_Catacombs_v1.0/torch_1.png" id="1_ky8f3"]
+[ext_resource type="Texture2D" uid="uid://cdjsk8cruhq35" path="res://RF_Catacombs_v1.0/torch_2.png" id="2_norah"]
+[ext_resource type="Texture2D" uid="uid://ddaxtsmfhxsr2" path="res://RF_Catacombs_v1.0/torch_3.png" id="3_x64wh"]
+[ext_resource type="Texture2D" uid="uid://rnusdd0b1cwy" path="res://RF_Catacombs_v1.0/torch_4.png" id="4_c3jyh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0xqf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ky8f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_norah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x64wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c3jyh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_cvhml"]
+offsets = PackedFloat32Array(0, 0.7)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bes27"]
+gradient = SubResource("Gradient_cvhml")
+width = 120
+height = 120
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Antorcha" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_t0xqf")
+frame_progress = 0.6256808
+
+[node name="light" type="PointLight2D" parent="."]
+position = Vector2(-3.0517578e-05, -3.0000153)
+scale = Vector2(1.44, 1.44)
+color = Color(1, 0.7375151, 0.5328257, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_bes27")
