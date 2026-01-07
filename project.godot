@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Dungeon Runner (TdR)"
-run/main_scene="uid://cakdty1swy37"
+run/main_scene="uid://dcry43g8sy0px"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://logo.png"
 
