@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://mapa.tscn")
+	get_tree().change_scene_to_file("res://assets del mapa/mapa.tscn")
 
 func _on_button_3_pressed() -> void:
 	get_tree().quit()
