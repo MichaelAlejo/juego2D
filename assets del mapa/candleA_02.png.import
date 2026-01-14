@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8fvli6iibnh7"
-path="res://.godot/imported/candleB_01.png-4907de4a145f4736c9fa463eb895f27b.ctex"
+uid="uid://ci201lxt10qbc"
+path="res://.godot/imported/candleA_02.png-2af280b7c24bcc69f6ffea2446106148.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://RF_Catacombs_v1.0/candleB_01.png"
-dest_files=["res://.godot/imported/candleB_01.png-4907de4a145f4736c9fa463eb895f27b.ctex"]
+source_file="res://assets del mapa/candleA_02.png"
+dest_files=["res://.godot/imported/candleA_02.png-2af280b7c24bcc69f6ffea2446106148.ctex"]
 
 [params]
 

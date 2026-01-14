@@ -13,7 +13,7 @@ config_version=5
 config/name="The Dungeon Runner (TdR)"
 run/main_scene="uid://dcry43g8sy0px"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://logo.png"
+config/icon="res://escenas/logo.png"
 
 [input]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwreb165xb464"
-path="res://.godot/imported/FONDO.webp-113678512f7bd4792f5b755e01fcd93e.ctex"
+uid="uid://sy8vpq1o6qie"
+path="res://.godot/imported/mainlevbuild.png-077b13c9f1dbbea90cf9b1942055045a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FONDO.webp"
-dest_files=["res://.godot/imported/FONDO.webp-113678512f7bd4792f5b755e01fcd93e.ctex"]
+source_file="res://assets del mapa/mainlevbuild.png"
+dest_files=["res://.godot/imported/mainlevbuild.png-077b13c9f1dbbea90cf9b1942055045a.ctex"]
 
 [params]
 

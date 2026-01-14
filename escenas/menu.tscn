@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcry43g8sy0px"]
 
-[ext_resource type="Texture2D" uid="uid://cwreb165xb464" path="res://FONDO.webp" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://behtcetlmokoy" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://cwreb165xb464" path="res://escenas/FONDO.webp" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://behtcetlmokoy" path="res://escenas/menu.gd" id="1_ouk20"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
 bg_color = Color(0, 0, 0, 1)
