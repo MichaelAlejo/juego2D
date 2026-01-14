@@ -1,12 +1,12 @@
-[gd_scene load_steps=20 format=4 uid="uid://d1luriu1e0l1u"]
+[gd_scene load_steps=20 format=4 uid="uid://cyrocb0k8d3qc"]
 
-[ext_resource type="Texture2D" uid="uid://sy8vpq1o6qie" path="res://RF_Catacombs_v1.0/mainlevbuild.png" id="1_2jh14"]
-[ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://jugador.tscn" id="2_70f7c"]
-[ext_resource type="Texture2D" uid="uid://7k6jr4vpryc6" path="res://RF_Catacombs_v1.0/candleAnimation.png" id="3_q8ihy"]
-[ext_resource type="Texture2D" uid="uid://coytlewnxgsf6" path="res://RF_Catacombs_v1.0/candleA_01.png" id="4_5d3jg"]
-[ext_resource type="Texture2D" uid="uid://1jlonmh76eh8" path="res://RF_Catacombs_v1.0/decorative.png" id="4_auc41"]
-[ext_resource type="Texture2D" uid="uid://klr75kjxj4os" path="res://RF_Catacombs_v1.0/torch_1.png" id="5_wan0n"]
-[ext_resource type="PackedScene" uid="uid://6fp3wlmj8kfm" path="res://torchAnimation.tscn" id="6_wan0n"]
+[ext_resource type="Texture2D" uid="uid://sy8vpq1o6qie" path="res://assets del mapa/mainlevbuild.png" id="1_2jh14"]
+[ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://escenas/jugador.tscn" id="2_70f7c"]
+[ext_resource type="Texture2D" uid="uid://7k6jr4vpryc6" path="res://assets del mapa/candleAnimation.png" id="3_q8ihy"]
+[ext_resource type="Texture2D" uid="uid://coytlewnxgsf6" path="res://assets del mapa/candleA_01.png" id="4_5d3jg"]
+[ext_resource type="Texture2D" uid="uid://1jlonmh76eh8" path="res://assets del mapa/decorative.png" id="4_auc41"]
+[ext_resource type="Texture2D" uid="uid://klr75kjxj4os" path="res://assets del mapa/torch_1.png" id="5_wan0n"]
+[ext_resource type="PackedScene" uid="uid://6fp3wlmj8kfm" path="res://escenas/torchAnimation.tscn" id="6_wan0n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jh14"]
 texture = ExtResource("1_2jh14")
