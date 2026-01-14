@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tn8e288d7v3b"
-path="res://.godot/imported/candleB_03.png-bf00cf3e9cd22a6280829668a0b40827.ctex"
+uid="uid://ufesmoum33r7"
+path="res://.godot/imported/wizard.png-f4eef98179c583e30c33e81eae343cae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets del mapa/candleB_03.png"
-dest_files=["res://.godot/imported/candleB_03.png-bf00cf3e9cd22a6280829668a0b40827.ctex"]
+source_file="res://animaciones de enemigos/mago/wizard.png"
+dest_files=["res://.godot/imported/wizard.png-f4eef98179c583e30c33e81eae343cae.ctex"]
 
 [params]
 

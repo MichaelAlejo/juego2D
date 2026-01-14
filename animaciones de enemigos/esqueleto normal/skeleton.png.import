@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdjsk8cruhq35"
-path="res://.godot/imported/torch_2.png-1cd71e7b4895ae18d90498695f53a5f5.ctex"
+uid="uid://pkndt0yufagt"
+path="res://.godot/imported/skeleton.png-82d74da5943d59159721a1c8e7b85857.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets del mapa/torch_2.png"
-dest_files=["res://.godot/imported/torch_2.png-1cd71e7b4895ae18d90498695f53a5f5.ctex"]
+source_file="res://animaciones de enemigos/esqueleto normal/skeleton.png"
+dest_files=["res://.godot/imported/skeleton.png-82d74da5943d59159721a1c8e7b85857.ctex"]
 
 [params]
 

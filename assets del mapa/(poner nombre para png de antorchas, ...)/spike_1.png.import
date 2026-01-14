@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqkgyrlkdlgbc"
-path="res://.godot/imported/candleA_03.png-02f7d03d7fc392ed0466cf72b1fdb28b.ctex"
+uid="uid://dr7180ya5b5sp"
+path="res://.godot/imported/spike_1.png-93df14d441e82c6eb405f8420374211a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets del mapa/candleA_03.png"
-dest_files=["res://.godot/imported/candleA_03.png-02f7d03d7fc392ed0466cf72b1fdb28b.ctex"]
+source_file="res://assets del mapa/(poner nombre para png de antorchas, ...)/spike_1.png"
+dest_files=["res://.godot/imported/spike_1.png-93df14d441e82c6eb405f8420374211a.ctex"]
 
 [params]
 

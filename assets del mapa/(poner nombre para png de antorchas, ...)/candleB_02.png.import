@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rnusdd0b1cwy"
-path="res://.godot/imported/torch_4.png-af76e5975ca607ba31e67993d212fd64.ctex"
+uid="uid://coepadx821db6"
+path="res://.godot/imported/candleB_02.png-5699d46685938e2d30ef30b100423a2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets del mapa/torch_4.png"
-dest_files=["res://.godot/imported/torch_4.png-af76e5975ca607ba31e67993d212fd64.ctex"]
+source_file="res://assets del mapa/(poner nombre para png de antorchas, ...)/candleB_02.png"
+dest_files=["res://.godot/imported/candleB_02.png-5699d46685938e2d30ef30b100423a2d.ctex"]
 
 [params]
 

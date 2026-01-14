@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://crkvrw1tku7xi"]
 
-[ext_resource type="Texture2D" uid="uid://vv1lox6e4vnm" path="res://assets del mapa/spike_0.png" id="1_jntuk"]
-[ext_resource type="Texture2D" uid="uid://dr7180ya5b5sp" path="res://assets del mapa/spike_1.png" id="2_ccpxc"]
-[ext_resource type="Texture2D" uid="uid://7jpawhww2h0k" path="res://assets del mapa/spike_2.png" id="3_kgm7q"]
-[ext_resource type="Texture2D" uid="uid://bov4hca7g2ym6" path="res://assets del mapa/spike_4.png" id="4_pw55m"]
+[ext_resource type="Texture2D" uid="uid://vv1lox6e4vnm" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/spike_0.png" id="1_jntuk"]
+[ext_resource type="Texture2D" uid="uid://dr7180ya5b5sp" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/spike_1.png" id="2_ccpxc"]
+[ext_resource type="Texture2D" uid="uid://7jpawhww2h0k" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/spike_2.png" id="3_kgm7q"]
+[ext_resource type="Texture2D" uid="uid://bov4hca7g2ym6" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/spike_4.png" id="4_pw55m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw764"]
 size = Vector2(14, 14)
