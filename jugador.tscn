@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://3yyn2tppfj7x"]
+[gd_scene load_steps=55 format=3 uid="uid://cwn2d1ap5i74a"]
 
 [ext_resource type="Texture2D" uid="uid://bqlngeajvqji" path="res://animaciones jugador pngs/1 - idle.png" id="1_cvhml"]
 [ext_resource type="Texture2D" uid="uid://cvdg45hy65dbo" path="res://animaciones jugador pngs/2 - move.png" id="2_btb33"]
@@ -49,7 +49,7 @@ func _physics_process(delta):
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvhml"]
-radius = 4.3845387
+radius = 5.2614465
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xwd11"]
 atlas = ExtResource("1_cvhml")
