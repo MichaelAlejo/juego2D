@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://cwn2d1ap5i74a"]
+[gd_scene load_steps=56 format=3 uid="uid://cwn2d1ap5i74a"]
 
 [ext_resource type="Texture2D" uid="uid://bqlngeajvqji" path="res://animaciones jugador pngs/1 - idle.png" id="1_cvhml"]
 [ext_resource type="Texture2D" uid="uid://cvdg45hy65dbo" path="res://animaciones jugador pngs/2 - move.png" id="2_btb33"]
@@ -396,11 +396,14 @@ height = 120
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ufvh"]
+size = Vector2(9.626032, 9.356916)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 slide_on_ceiling = false
 script = SubResource("GDScript_cvhml")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Paredes" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 3.9999993)
 scale = Vector2(1.1403708, 0.94063926)
 shape = SubResource("CircleShape2D_cvhml")
@@ -409,7 +412,8 @@ shape = SubResource("CircleShape2D_cvhml")
 texture_filter = 1
 scale = Vector2(0.55325156, 0.5367631)
 sprite_frames = SubResource("SpriteFrames_6jp41")
-animation = &"3_dash"
+animation = &"1_idle"
+frame_progress = 0.6919485
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.77133155, 38.54468)
@@ -419,3 +423,15 @@ zoom = Vector2(2.5, 2.5)
 scale = Vector2(1.44, 1.44)
 energy = 1.4
 texture = SubResource("GradientTexture2D_btb33")
+
+[node name="Colision" type="CollisionShape2D" parent="."]
+position = Vector2(0.50000006, -0.49999952)
+scale = Vector2(0.9349648, 2.4580748)
+shape = SubResource("RectangleShape2D_7ufvh")
+disabled = true
+
+[node name="Hit" type="CollisionShape2D" parent="."]
+position = Vector2(12, 1.3552527e-20)
+scale = Vector2(1.8872995, 2.1047344)
+shape = SubResource("CircleShape2D_cvhml")
+disabled = true
