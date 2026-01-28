@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cyrocb0k8d3qc"]
+[gd_scene load_steps=21 format=4 uid="uid://cyrocb0k8d3qc"]
 
 [ext_resource type="Texture2D" uid="uid://sy8vpq1o6qie" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/mainlevbuild.png" id="1_3yegs"]
 [ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://animaciones jugador pngs/jugador.tscn" id="2_tyei7"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://coytlewnxgsf6" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/candleA_01.png" id="5_gaanh"]
 [ext_resource type="Texture2D" uid="uid://klr75kjxj4os" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/torch_1.png" id="6_b1hrd"]
 [ext_resource type="PackedScene" uid="uid://6fp3wlmj8kfm" path="res://escenas/torchAnimation.tscn" id="7_v4w7b"]
+[ext_resource type="PackedScene" uid="uid://did2mj0y8t14w" path="res://animaciones de enemigos/esqueleto con espada/esqueleto_espada.tscn" id="8_tyei7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jh14"]
 texture = ExtResource("1_3yegs")
@@ -4853,3 +4854,6 @@ frame_progress = 0.2291577
 [node name="Antorcha" parent="." instance=ExtResource("7_v4w7b")]
 position = Vector2(328, 167)
 frame_progress = 0.048422895
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_tyei7")]
+position = Vector2(270, 193)

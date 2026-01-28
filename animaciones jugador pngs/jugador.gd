@@ -1,38 +1,39 @@
+class_name Player
 extends CharacterBody2D
 
-@export var speed := 65
-@onready var anim := $AnimatedSprite2D
+var cardinal_direction : Vector2 = Vector2.DOWN
+var direction : Vector2 = Vector2.ZERO
+var move_speed : float = 100.0
+var state : String = "1_idle"
 
-@warning_ignore("unused_parameter")
-func _physics_process(delta):
-	var input_vector = Vector2.ZERO
-	
-	input_vector.x = Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
-	input_vector.y = Input.get_action_strength("abajo") - Input.get_action_strength("arriba")
+@onready var animaciones : AnimatedSprite2D = $AnimatedSprite2D
 
-	if input_vector != Vector2.ZERO:
-		#  Girar sprite izquierda / derecha
-		if input_vector.x < 0:
-			anim.flip_h = true   # izquierda
-		elif input_vector.x > 0:
-			anim.flip_h = false  # derecha
-		
-		# Conversión a isométrico
-		var iso_direction = Vector2(
-			input_vector.x - input_vector.y,
-			(input_vector.x + input_vector.y) / 2
-		)
-		
-		velocity = iso_direction.normalized() * speed
-		
-		# Animación de movimiento
-		if anim.animation != "2_move":
-			anim.play("2_move")
+
+func _ready():
+	animaciones.play("1_idle")
+
+
+func _process(delta):
+	# INPUT
+	direction.x = Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
+	direction.y = Input.get_action_strength("abajo") - Input.get_action_strength("arriba")
+
+	# MOVIMIENTO
+	if direction != Vector2.ZERO:
+		velocity = direction.normalized() * move_speed
 	else:
 		velocity = Vector2.ZERO
-		
-		# Animación idle
-		if anim.animation != "1_idle":
-			anim.play("1_idle")
 
+	# ANIMACIONES
+	if direction == Vector2.ZERO:
+		if state != "1_idle":
+			state = "1_idle"
+			animaciones.play(state)
+	else:
+		if state != "2_move":
+			state = "2_move"
+			animaciones.play(state)
+
+
+func _physics_process(delta):
 	move_and_slide()
