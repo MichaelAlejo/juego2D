@@ -18,6 +18,13 @@ func _process(delta):
 	direction.x = Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
 	direction.y = Input.get_action_strength("abajo") - Input.get_action_strength("arriba")
 
+	# GIRAR SPRITE izquierda / derecha
+	if direction != Vector2.ZERO:
+		if direction.x < 0:
+			animaciones.flip_h = true   # izquierda
+		elif direction.x > 0:
+			animaciones.flip_h = false  # derecha
+
 	# MOVIMIENTO
 	if direction != Vector2.ZERO:
 		velocity = direction.normalized() * move_speed

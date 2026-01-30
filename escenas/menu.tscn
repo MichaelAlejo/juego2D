@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcry43g8sy0px"]
+[gd_scene format=3 uid="uid://dcry43g8sy0px"]
 
 [ext_resource type="Texture2D" uid="uid://cwreb165xb464" path="res://escenas/FONDO.webp" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://behtcetlmokoy" path="res://escenas/menu.gd" id="1_ouk20"]
@@ -9,7 +9,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
 bg_color = Color(0.42205065, 0.26583716, 0.21323001, 1)
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=1711193333]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ouk20")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=543652901]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,7 +28,7 @@ grow_vertical = 2
 scale = Vector2(1.001119, 1.0041312)
 color = Color(0.1511535, 0.1560444, 0.15670204, 1)
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2116535135]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_lti8b")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1824936938]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -54,14 +54,14 @@ scale = Vector2(4.9509625, 4.485115)
 pivot_offset = Vector2(39.49884, 50.50015)
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1280313596]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
 text = "PLAY"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1523338288]
 texture_filter = 1
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
