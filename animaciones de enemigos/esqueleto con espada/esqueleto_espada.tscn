@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://did2mj0y8t14w"]
+[gd_scene format=3 uid="uid://did2mj0y8t14w"]
 
 [ext_resource type="Texture2D" uid="uid://daxghhkkghlf5" path="res://animaciones de enemigos/esqueleto con espada/skeleton_swordman.png" id="1_b8ms8"]
 
@@ -209,12 +209,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1341564449]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1036207104]
 shape = SubResource("CapsuleShape2D_t62md")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1587862590]
 texture_filter = 1
 position = Vector2(4, 0)
 sprite_frames = SubResource("SpriteFrames_b3ec0")

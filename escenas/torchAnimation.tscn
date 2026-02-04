@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://6fp3wlmj8kfm"]
+[gd_scene format=3 uid="uid://6fp3wlmj8kfm"]
 
 [ext_resource type="Texture2D" uid="uid://klr75kjxj4os" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/torch_1.png" id="1_ky8f3"]
 [ext_resource type="Texture2D" uid="uid://cdjsk8cruhq35" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/torch_2.png" id="2_norah"]
 [ext_resource type="Texture2D" uid="uid://ddaxtsmfhxsr2" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/torch_3.png" id="3_x64wh"]
 [ext_resource type="Texture2D" uid="uid://rnusdd0b1cwy" path="res://assets del mapa/(poner nombre para png de antorchas, ...)/torch_4.png" id="4_c3jyh"]
+[ext_resource type="Script" uid="uid://bi872ovnbogcv" path="res://escenas/torch_animation.gd" id="5_7jfmw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t0xqf"]
 animations = [{
@@ -36,12 +37,13 @@ height = 120
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Antorcha" type="AnimatedSprite2D"]
+[node name="Antorcha" type="AnimatedSprite2D" unique_id=912310271]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_t0xqf")
 frame_progress = 0.6256808
+script = ExtResource("5_7jfmw")
 
-[node name="light" type="PointLight2D" parent="."]
+[node name="light" type="PointLight2D" parent="." unique_id=2115828131]
 position = Vector2(-3.0517578e-05, -3.0000153)
 scale = Vector2(1.44, 1.44)
 color = Color(1, 0.7375151, 0.5328257, 1)
