@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cnckklckxf5r8" path="res://animaciones jugador pngs/5 - hit.png" id="6_oxunl"]
 [ext_resource type="Texture2D" uid="uid://cvqyay2r0j81s" path="res://animaciones jugador pngs/6 - death.png" id="7_ilfwx"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fut6a"]
+size = Vector2(7.8921695, 6.3786407)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xwd11"]
 atlas = ExtResource("2_6lf0w")
 region = Rect2(0, 0, 48, 48)
@@ -353,15 +356,20 @@ height = 120
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cvhml"]
-radius = 5.2614465
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ufvh"]
 size = Vector2(9.626032, 9.356916)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvhml"]
+radius = 5.2614465
 
 [node name="Player" type="CharacterBody2D" unique_id=779849852]
 slide_on_ceiling = false
 script = ExtResource("1_fut6a")
+
+[node name="Paredes" type="CollisionShape2D" parent="." unique_id=256795983]
+position = Vector2(0.5, 8)
+scale = Vector2(1.1403708, 0.94063926)
+shape = SubResource("RectangleShape2D_fut6a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2136390017]
 texture_filter = 1
@@ -379,19 +387,14 @@ scale = Vector2(1.44, 1.44)
 energy = 1.4
 texture = SubResource("GradientTexture2D_btb33")
 
-[node name="Paredes" type="CollisionShape2D" parent="." unique_id=256795983]
-position = Vector2(-1, 3.9999993)
-scale = Vector2(1.1403708, 0.94063926)
-shape = SubResource("CircleShape2D_cvhml")
+[node name="Area2D" type="Area2D" parent="." unique_id=378819340]
 
-[node name="Colision" type="CollisionShape2D" parent="." unique_id=768286042]
+[node name="Colision" type="CollisionShape2D" parent="Area2D" unique_id=768286042]
 position = Vector2(0.50000006, -0.49999952)
 scale = Vector2(0.9349648, 2.4580748)
 shape = SubResource("RectangleShape2D_7ufvh")
-disabled = true
 
-[node name="Hit" type="CollisionShape2D" parent="." unique_id=1337246992]
+[node name="Hit" type="CollisionShape2D" parent="Area2D" unique_id=1337246992]
 position = Vector2(12, 1.3552527e-20)
 scale = Vector2(1.8872995, 2.1047344)
 shape = SubResource("CircleShape2D_cvhml")
-disabled = true

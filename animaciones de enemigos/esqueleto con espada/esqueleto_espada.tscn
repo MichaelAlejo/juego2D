@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://daxghhkkghlf5" path="res://animaciones de enemigos/esqueleto con espada/skeleton_swordman.png" id="1_b8ms8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t62md"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vy5sd"]
+size = Vector2(13, 9.61539)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vy5sd"]
 atlas = ExtResource("1_b8ms8")
@@ -209,13 +210,31 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vy5sd"]
+radius = 7.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8ms8"]
+size = Vector2(13, 18)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1341564449]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1036207104]
-shape = SubResource("CapsuleShape2D_t62md")
+[node name="Paredes" type="CollisionShape2D" parent="." unique_id=945898760]
+position = Vector2(-0.5, 5.5)
+scale = Vector2(1, 0.5199997)
+shape = SubResource("RectangleShape2D_vy5sd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1587862590]
 texture_filter = 1
 position = Vector2(4, 0)
 sprite_frames = SubResource("SpriteFrames_b3ec0")
 animation = &"1_idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=921909719]
+
+[node name="Hit" type="CollisionShape2D" parent="Area2D" unique_id=855564692]
+position = Vector2(10, 3)
+shape = SubResource("CircleShape2D_vy5sd")
+
+[node name="Colision" type="CollisionShape2D" parent="Area2D" unique_id=1036207104]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_b8ms8")
