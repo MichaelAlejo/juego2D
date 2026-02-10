@@ -229,12 +229,14 @@ position = Vector2(4, 0)
 sprite_frames = SubResource("SpriteFrames_b3ec0")
 animation = &"1_idle"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=921909719]
+[node name="AreaHit" type="Area2D" parent="." unique_id=921909719]
 
-[node name="Hit" type="CollisionShape2D" parent="Area2D" unique_id=855564692]
+[node name="Hit" type="CollisionShape2D" parent="AreaHit" unique_id=855564692]
 position = Vector2(10, 3)
 shape = SubResource("CircleShape2D_vy5sd")
 
-[node name="Colision" type="CollisionShape2D" parent="Area2D" unique_id=1036207104]
+[node name="AreaColision" type="Area2D" parent="." unique_id=1001659204]
+
+[node name="Colision" type="CollisionShape2D" parent="AreaColision" unique_id=1036207104]
 position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_b8ms8")

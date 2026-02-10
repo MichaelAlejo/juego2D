@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="The Dungeon Runner (TdR)"
-run/main_scene="uid://dcry43g8sy0px"
+run/main_scene="uid://v85lh5fa8jpx"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://escenas/logo.png"
 
