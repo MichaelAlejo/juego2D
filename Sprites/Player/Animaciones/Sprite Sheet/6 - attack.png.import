@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmhn8is4ix3oq"
-path="res://.godot/imported/9 - idle-up-attack.png-146248814b22c207e19685e7099cec70.ctex"
+uid="uid://7fwxakf1e4a1"
+path="res://.godot/imported/6 - attack.png-eea412edcb336b2fd5103400709a6319.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Animaciones/Sprite Sheet/9 - idle-up-attack.png"
-dest_files=["res://.godot/imported/9 - idle-up-attack.png-146248814b22c207e19685e7099cec70.ctex"]
+source_file="res://Sprites/Player/Animaciones/Sprite Sheet/6 - attack.png"
+dest_files=["res://.godot/imported/6 - attack.png-eea412edcb336b2fd5103400709a6319.ctex"]
 
 [params]
 

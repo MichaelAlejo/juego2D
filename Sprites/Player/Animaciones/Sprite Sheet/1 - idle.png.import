@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o6psbthbubmw"
-path="res://.godot/imported/7 - jump-up-attack.png-d26149ef56fc105cbdb63b44877938c1.ctex"
+uid="uid://blu7crlekd6w0"
+path="res://.godot/imported/1 - idle.png-3fc920940f57955d4ef3bfeac01828a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Animaciones/Sprite Sheet/7 - jump-up-attack.png"
-dest_files=["res://.godot/imported/7 - jump-up-attack.png-d26149ef56fc105cbdb63b44877938c1.ctex"]
+source_file="res://Sprites/Player/Animaciones/Sprite Sheet/1 - idle.png"
+dest_files=["res://.godot/imported/1 - idle.png-3fc920940f57955d4ef3bfeac01828a2.ctex"]
 
 [params]
 

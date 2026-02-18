@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5htisriehg4u"
-path="res://.godot/imported/15 - death.png-96511ca902098e44f240204640cde620.ctex"
+uid="uid://dmgp83s50ohhj"
+path="res://.godot/imported/7 - hit.png-2b1ff431258886f232e6ec909696dd04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Animaciones/Sprite Sheet/15 - death.png"
-dest_files=["res://.godot/imported/15 - death.png-96511ca902098e44f240204640cde620.ctex"]
+source_file="res://Sprites/Player/Animaciones/Sprite Sheet/7 - hit.png"
+dest_files=["res://.godot/imported/7 - hit.png-2b1ff431258886f232e6ec909696dd04.ctex"]
 
 [params]
 
