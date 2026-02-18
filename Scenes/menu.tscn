@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://ctgiyewsbtmf2"]
+
+[ext_resource type="Script" uid="uid://n5f7j87m3nbi" path="res://Scripts/menu.gd" id="1_cayip"]
+[ext_resource type="Texture2D" uid="uid://d10l5hw5ic6pd" path="res://Sprites/Map/background/background_layer_1.png" id="1_xhh6f"]
+[ext_resource type="FontFile" uid="uid://sohciwor7xii" path="res://Daydream DEMO.otf" id="2_cayip"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_158mb"]
+texture = ExtResource("1_xhh6f")
+modulate_color = Color(0.36282945, 0.36282945, 0.36282945, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4yt8"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cayip"]
+bg_color = Color(0.2775277, 0.27752778, 0.27752754, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_158mb"]
+bg_color = Color(0.7288223, 0.7288218, 0.7288221, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+
+[node name="Menu" type="Control" unique_id=488960833]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cayip")
+
+[node name="Panel" type="Panel" parent="." unique_id=1451394905]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_158mb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1983505319]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -74.0
+offset_right = 250.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=2021715722]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cayip")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u4yt8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_158mb")
+text = "PLAY"
+
+[node name="Controls" type="Button" parent="VBoxContainer" unique_id=4233335]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cayip")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u4yt8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_158mb")
+text = "CONTROLS"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=450238620]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cayip")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_u4yt8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
+theme_override_styles/hover = SubResource("StyleBoxFlat_158mb")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="." unique_id=930916076]
+texture_filter = 1
+layout_mode = 0
+offset_left = 107.0
+offset_top = 107.0
+offset_right = 1086.0
+offset_bottom = 200.0
+theme_override_fonts/font = ExtResource("2_cayip")
+theme_override_font_sizes/font_size = 57
+text = "Plataform jumping"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
