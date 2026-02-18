@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="2DJuego"
+config/name="Parkour Quest (TdR)"
 run/main_scene="uid://ctgiyewsbtmf2"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://c7nr6842k43ga"
 
 [file_customization]
 
@@ -52,3 +52,5 @@ move_right={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
