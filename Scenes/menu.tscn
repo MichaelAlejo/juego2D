@@ -87,7 +87,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_u4yt8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_cayip")
 theme_override_styles/hover = SubResource("StyleBoxFlat_158mb")
-text = "CONTROLS"
+text = "TUTORIAL"
 
 [node name="Exit" type="Button" parent="VBoxContainer" unique_id=450238620]
 layout_mode = 2
