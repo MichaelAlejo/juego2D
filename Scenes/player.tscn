@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://7fwxakf1e4a1" path="res://Sprites/Player/Animaciones/Sprite Sheet/6 - attack.png" id="6_gymyn"]
 [ext_resource type="Texture2D" uid="uid://dmgp83s50ohhj" path="res://Sprites/Player/Animaciones/Sprite Sheet/7 - hit.png" id="7_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://b5htisriehg4u" path="res://Sprites/Player/Animaciones/Sprite Sheet/8 - death.png" id="8_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://dwd02m4xo66td" path="res://corazon.png" id="9_f1ek2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3smsa"]
 size = Vector2(15, 38.5)
@@ -389,3 +390,53 @@ zoom = Vector2(2, 2)
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
 animation = &"4_fall"
+
+[node name="HBoxContainer" type="Panel" parent="." unique_id=270632498]
+anchors_preset = -1
+anchor_left = 0.25100002
+anchor_top = -0.32900003
+anchor_right = 0.25100002
+anchor_bottom = -0.32900003
+offset_left = 148.0
+offset_top = -196.80798
+offset_right = 286.848
+offset_bottom = -167.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer" unique_id=1867293668]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 140.0
+offset_bottom = 27.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer" unique_id=1810228093]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_f1ek2")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/HBoxContainer" unique_id=563270041]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_f1ek2")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/HBoxContainer" unique_id=430744546]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_f1ek2")
+expand_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/HBoxContainer" unique_id=435636106]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_f1ek2")
+expand_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer/HBoxContainer" unique_id=254782335]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_f1ek2")
+expand_mode = 2
