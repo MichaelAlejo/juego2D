@@ -397,10 +397,10 @@ anchor_left = 0.25100002
 anchor_top = -0.32900003
 anchor_right = 0.25100002
 anchor_bottom = -0.32900003
-offset_left = 148.0
-offset_top = -196.80798
-offset_right = 286.848
-offset_bottom = -167.0
+offset_left = 143.0
+offset_top = -192.0
+offset_right = 281.848
+offset_bottom = -162.19202
 grow_horizontal = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer" unique_id=1867293668]
