@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb8gve2rw3tvp"
-path="res://.godot/imported/2 - move.png-577bd385561b60e3ea93e3b3bd2423c7.ctex"
+uid="uid://cy1g7hyeh0ys7"
+path="res://.godot/imported/3 - jump.png-bfd9292eec7eaabd11704347890a018d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Animaciones/Sprite Sheet/2 - move.png"
-dest_files=["res://.godot/imported/2 - move.png-577bd385561b60e3ea93e3b3bd2423c7.ctex"]
+source_file="res://Sprites/Player/3 - jump.png"
+dest_files=["res://.godot/imported/3 - jump.png-bfd9292eec7eaabd11704347890a018d.ctex"]
 
 [params]
 

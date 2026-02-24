@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqf2g0garpnn4"
-path="res://.godot/imported/5 - fall.png-2b6e35ac38c76257ea8a64fbe0252a55.ctex"
+uid="uid://dmgp83s50ohhj"
+path="res://.godot/imported/7 - hit.png-12fc6cb51aee9e5264af17edd0de2b13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Animaciones/Sprite Sheet/5 - fall.png"
-dest_files=["res://.godot/imported/5 - fall.png-2b6e35ac38c76257ea8a64fbe0252a55.ctex"]
+source_file="res://Sprites/Player/7 - hit.png"
+dest_files=["res://.godot/imported/7 - hit.png-12fc6cb51aee9e5264af17edd0de2b13.ctex"]
 
 [params]
 

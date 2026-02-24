@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7fwxakf1e4a1"
-path="res://.godot/imported/6 - attack.png-eea412edcb336b2fd5103400709a6319.ctex"
+uid="uid://vr6d50skoetk"
+path="res://.godot/imported/1 - idle.png-0d1e8d9f53e60482dd2182e9497f68ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Animaciones/Sprite Sheet/6 - attack.png"
-dest_files=["res://.godot/imported/6 - attack.png-eea412edcb336b2fd5103400709a6319.ctex"]
+source_file="res://Sprites/Enemigo Seta/1 - idle.png"
+dest_files=["res://.godot/imported/1 - idle.png-0d1e8d9f53e60482dd2182e9497f68ae.ctex"]
 
 [params]
 
