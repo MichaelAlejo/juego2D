@@ -4,9 +4,20 @@ const SPEED = 155
 const JUMP_VELOCITY = -300
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var dust = preload("res://Scenes/dust.tscn")
+var isgrounded = true
+
 
 
 func _physics_process(delta):
+	
+	
+	if isgrounded == false and is_on_floor() == true:
+		var instance = dust.instantiate()
+		instance.global_position =  $Marker2D.global_position
+		get_parent().add_child(instance)
+	 
+	isgrounded = is_on_floor()
 
 	# Gravedad
 	if not is_on_floor():

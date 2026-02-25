@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://7fwxakf1e4a1" path="res://Sprites/Player/6 - attack.png" id="6_gymyn"]
 [ext_resource type="Texture2D" uid="uid://dmgp83s50ohhj" path="res://Sprites/Player/7 - hit.png" id="7_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://b5htisriehg4u" path="res://Sprites/Player/8 - death.png" id="8_ukyrk"]
-[ext_resource type="Texture2D" uid="uid://dwd02m4xo66td" path="res://corazon.png" id="9_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://dwd02m4xo66td" path="res://UI/corazon.png" id="9_f1ek2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3smsa"]
 size = Vector2(15, 38.5)
@@ -378,7 +378,7 @@ slide_on_ceiling = false
 script = ExtResource("1_fut6a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802882654]
-position = Vector2(-1.5, -3.75)
+position = Vector2(0.5, -2.75)
 shape = SubResource("RectangleShape2D_3smsa")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1016235407]
@@ -389,7 +389,7 @@ zoom = Vector2(2, 2)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=898904930]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
-animation = &"4_fall"
+animation = &"1_idle"
 
 [node name="HBoxContainer" type="Panel" parent="." unique_id=270632498]
 anchors_preset = -1
@@ -440,3 +440,6 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_f1ek2")
 expand_mode = 2
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1407600684]
+position = Vector2(2, 12)

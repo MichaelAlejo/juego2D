@@ -20,7 +20,8 @@ config/icon="uid://c7nr6842k43ga"
 folder_colors={
 "res://Scenes/": "red",
 "res://Scripts/": "green",
-"res://Sprites/": "blue"
+"res://Sprites/": "blue",
+"res://UI/": "yellow"
 }
 
 [input]
