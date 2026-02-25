@@ -373,7 +373,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=779849852]
+[node name="Player" type="CharacterBody2D" unique_id=779849852 groups=["Player"]]
 slide_on_ceiling = false
 script = ExtResource("1_fut6a")
 
