@@ -7,8 +7,6 @@ const JUMP_VELOCITY = -300
 @onready var dust = preload("res://Scenes/dust.tscn")
 var isgrounded = true
 
-
-
 func _physics_process(delta):
 	
 	
