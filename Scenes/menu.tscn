@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://n5f7j87m3nbi" path="res://Scripts/menu.gd" id="1_cayip"]
 [ext_resource type="Texture2D" uid="uid://d10l5hw5ic6pd" path="res://Sprites/Map/background/background_layer_1.png" id="1_xhh6f"]
-[ext_resource type="FontFile" uid="uid://sohciwor7xii" path="res://UI/Daydream DEMO.otf" id="2_cayip"]
+[ext_resource type="FontFile" uid="uid://sohciwor7xii" path="res://Daydream DEMO.otf" id="2_cayip"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_158mb"]
 texture = ExtResource("1_xhh6f")

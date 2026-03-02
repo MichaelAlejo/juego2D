@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://sohciwor7xii"
-path="res://.godot/imported/Daydream DEMO.otf-75d75d53945a21cd35e441076e63351a.fontdata"
+path="res://.godot/imported/Daydream DEMO.otf-4acbea0c4a5707b768438b8b7e757cc5.fontdata"
 
 [deps]
 
-source_file="res://UI/Daydream DEMO.otf"
-dest_files=["res://.godot/imported/Daydream DEMO.otf-75d75d53945a21cd35e441076e63351a.fontdata"]
+source_file="res://Daydream DEMO.otf"
+dest_files=["res://.godot/imported/Daydream DEMO.otf-4acbea0c4a5707b768438b8b7e757cc5.fontdata"]
 
 [params]
 
