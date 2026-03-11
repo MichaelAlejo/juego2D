@@ -8,11 +8,10 @@ const JUMP_VELOCITY = -300
 var isgrounded = true
 
 func _physics_process(delta):
-	
-	
+
 	if isgrounded == false and is_on_floor() == true:
 		var instance = dust.instantiate()
-		instance.global_position =  $Marker2D.global_position
+		instance.global_position = $Marker2D.global_position
 		get_parent().add_child(instance)
 	 
 	isgrounded = is_on_floor()
@@ -34,8 +33,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 
-
-	# ANIMACIONES (sin reiniciar)
+	# ANIMACIONES
 
 	if not is_on_floor():
 
@@ -57,5 +55,13 @@ func _physics_process(delta):
 			if animated_sprite.animation != "1_idle":
 				animated_sprite.play("1_idle")
 
-
 	move_and_slide()
+
+
+func die():
+	print("Game over")
+	get_tree().reload_current_scene()
+
+
+func jump_bounce():
+	velocity.y = -250

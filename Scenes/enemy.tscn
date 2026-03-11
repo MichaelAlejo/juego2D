@@ -1,40 +1,41 @@
 [gd_scene format=3 uid="uid://cohidmsokf6bb"]
 
-[ext_resource type="Texture2D" uid="uid://m8n8rhvrag1j" path="res://Sprites/Enemigo Seta/2 - walk.png" id="1_f50pn"]
+[ext_resource type="Script" uid="uid://6x3b8ndmq7iv" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://m8n8rhvrag1j" path="res://Sprites/Enemigo Seta/2 - walk.png" id="2_afpow"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ij6vw"]
 radius = 17.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghijl"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(0, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_44cfe"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(80, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dd465"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(160, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lhvu3"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(240, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4sjlk"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(320, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qp52p"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(400, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ct3r"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(480, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kp85"]
-atlas = ExtResource("1_f50pn")
+atlas = ExtResource("2_afpow")
 region = Rect2(560, 0, 80, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qnedo"]
@@ -69,7 +70,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=392713156]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
+size = Vector2(35, 36)
+
+[node name="enemy" type="CharacterBody2D" unique_id=392713156]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_1f0kj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1398648033]
 position = Vector2(0, 13)
@@ -82,6 +89,14 @@ autoplay = "default"
 frame = 7
 frame_progress = 1.0
 
-[node name="RayCast2D" type="RayCast2D" parent="AnimatedSprite2D" unique_id=1828578591]
-position = Vector2(-14, 7)
-target_position = Vector2(-125, 0)
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=924269398]
+target_position = Vector2(-12, 24)
+collision_mask = 0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=961859708]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=908562184]
+position = Vector2(-0.5, 13)
+shape = SubResource("RectangleShape2D_1f0kj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

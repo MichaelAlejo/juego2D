@@ -374,6 +374,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=779849852 groups=["Player"]]
+collision_mask = 6
 slide_on_ceiling = false
 script = ExtResource("1_fut6a")
 
@@ -387,6 +388,7 @@ scale = Vector2(0.77133155, 38.54468)
 zoom = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=898904930]
+visibility_layer = 2
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
 animation = &"1_idle"
