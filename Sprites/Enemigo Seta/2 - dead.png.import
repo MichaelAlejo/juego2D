@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vr6d50skoetk"
-path="res://.godot/imported/1 - idle.png-0d1e8d9f53e60482dd2182e9497f68ae.ctex"
+uid="uid://ma2ql0jy6sov"
+path="res://.godot/imported/2 - dead.png-06ec8e1c8356b6ea27ef9c33c6da2315.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemigo Seta/1 - idle.png"
-dest_files=["res://.godot/imported/1 - idle.png-0d1e8d9f53e60482dd2182e9497f68ae.ctex"]
+source_file="res://Sprites/Enemigo Seta/2 - dead.png"
+dest_files=["res://.godot/imported/2 - dead.png-06ec8e1c8356b6ea27ef9c33c6da2315.ctex"]
 
 [params]
 

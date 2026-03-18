@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m8n8rhvrag1j"
-path="res://.godot/imported/2 - walk.png-3e1a43504a2d08e45f685c12db041bb9.ctex"
+path="res://.godot/imported/1 - walk.png-954e37b5579ec7152f8895bc8a75fab5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemigo Seta/2 - walk.png"
-dest_files=["res://.godot/imported/2 - walk.png-3e1a43504a2d08e45f685c12db041bb9.ctex"]
+source_file="res://Sprites/Enemigo Seta/1 - walk.png"
+dest_files=["res://.godot/imported/1 - walk.png-954e37b5579ec7152f8895bc8a75fab5.ctex"]
 
 [params]
 
