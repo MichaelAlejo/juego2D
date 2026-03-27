@@ -194,7 +194,3 @@ shape = SubResource("CircleShape2D_ij6vw")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qnedo")
 animation = &"1 - walk"
-
-[node name="FloorCheck" type="RayCast2D" parent="." unique_id=1255698097]
-position = Vector2(-19, 0)
-target_position = Vector2(0, 32)

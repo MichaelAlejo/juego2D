@@ -5,7 +5,13 @@ const JUMP_VELOCITY = -300
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var dust = preload("res://Scenes/dust.tscn")
+
 var isgrounded = true
+var spawn_position
+
+func _ready():
+	spawn_position = global_position
+
 
 func _physics_process(delta):
 
@@ -59,9 +65,5 @@ func _physics_process(delta):
 
 
 func die():
-	print("Game over")
-	get_tree().reload_current_scene()
-
-
-func jump_bounce():
-	velocity.y = -250
+	global_position = spawn_position
+	velocity = Vector2.ZERO
