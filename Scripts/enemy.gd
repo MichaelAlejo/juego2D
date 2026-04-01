@@ -4,6 +4,10 @@ extends CharacterBody2D
 var direction = -1
 var dead = false
 
+var health = 50
+var health_max = 50
+var health_min = 0
+
 func _physics_process(delta):
 
 	if dead:

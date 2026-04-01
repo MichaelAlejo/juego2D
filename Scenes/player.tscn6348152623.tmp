@@ -462,4 +462,3 @@ shape = SubResource("RectangleShape2D_3smsa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone" unique_id=1220290028]
 position = Vector2(22, -4)
 shape = SubResource("CircleShape2D_tx1dd")
-disabled = true

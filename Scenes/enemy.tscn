@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://6x3b8ndmq7iv" path="res://Scripts/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://m8n8rhvrag1j" path="res://Sprites/Enemigo Seta/1 - walk.png" id="2_afpow"]
 [ext_resource type="Texture2D" uid="uid://ma2ql0jy6sov" path="res://Sprites/Enemigo Seta/2 - dead.png" id="3_afpow"]
+[ext_resource type="PackedScene" uid="uid://b71tfe6yqepp4" path="res://Scenes/health_bar.tscn" id="4_287tu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ij6vw"]
 radius = 17.0
@@ -187,6 +188,8 @@ collision_mask = 5
 script = ExtResource("1_1f0kj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1398648033]
+light_mask = 129
+visibility_layer = 129
 position = Vector2(0, 14)
 shape = SubResource("CircleShape2D_ij6vw")
 
@@ -194,3 +197,10 @@ shape = SubResource("CircleShape2D_ij6vw")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qnedo")
 animation = &"1 - walk"
+
+[node name="HealthBar" parent="." unique_id=2086820887 instance=ExtResource("4_287tu")]
+offset_left = -21.0
+offset_top = 36.0
+offset_right = 21.0
+offset_bottom = 42.0
+show_percentage = false
