@@ -182,6 +182,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_287tu"]
+radius = 20.024984
+
 [node name="enemy" type="CharacterBody2D" unique_id=392713156]
 collision_layer = 2
 collision_mask = 5
@@ -204,3 +207,12 @@ offset_top = 36.0
 offset_right = 21.0
 offset_bottom = 42.0
 show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="SetaHitbox" type="Area2D" parent="." unique_id=1845862413]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SetaHitbox" unique_id=1344289339]
+position = Vector2(0, 14)
+shape = SubResource("CircleShape2D_287tu")
+
+[connection signal="area_entered" from="SetaHitbox" to="." method="_on_seta_hitbox_area_entered"]

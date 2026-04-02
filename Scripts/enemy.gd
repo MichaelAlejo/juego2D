@@ -7,6 +7,9 @@ var dead = false
 var health = 50
 var health_max = 50
 var health_min = 0
+var taking_damage = 0
+var is_roaming = 0
+
 
 func _physics_process(delta):
 
@@ -30,3 +33,17 @@ func _physics_process(delta):
 
 	if $AnimatedSprite2D.animation != "walk":
 		$AnimatedSprite2D.play("1 - walk")
+
+
+func _on_seta_hitbox_area_entered(area):
+	if area == Global.playerDamageZone:
+		var damage = Global.playerDamageAmount
+		take_damage(damage)
+	
+func take_damage(damage):
+	health -= damage
+	taking_damage = true
+	if health <= 0:
+		health = 0
+		dead = true	
+	print(str(self), "current health is", health)

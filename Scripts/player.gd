@@ -40,8 +40,10 @@ func _physics_process(delta):
 	if direction != 0:
 		velocity.x = direction * SPEED
 		animated_sprite.flip_h = direction < 0
+		# Girar el DamageZone
+		deal_damage_zone.scale.x = direction 
 	else:
-		velocity.x = 0
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	# ANIMACIONES
 
@@ -67,7 +69,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("left_mouse"):
 		attack = "5_attack"
 		handle_attack_animation("5_attack")
-		
+	set_damage(attack)
 	move_and_slide()
 
 func die():
@@ -87,3 +89,9 @@ func toggle_damage_collisions(attack):
 	damage_zone_collision.disabled = false
 	await get_tree().create_timer(wait_time).timeout
 	damage_zone_collision.disabled = true
+	
+func 	set_damage(attack):
+	var damage_to_deal: int
+	if attack == "5_attack":
+		damage_to_deal = 15
+	Global.playerDamageAmount = damage_to_deal

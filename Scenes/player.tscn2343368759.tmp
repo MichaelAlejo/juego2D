@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://b5htisriehg4u" path="res://Sprites/Player/8 - death.png" id="8_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://dwd02m4xo66td" path="res://UI/corazon.png" id="9_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://b71tfe6yqepp4" path="res://Scenes/health_bar.tscn" id="10_tx1dd"]
-[ext_resource type="Texture2D" uid="uid://ctryibxapay2m" path="res://UI/viento.png" id="11_gymyn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
 atlas = ExtResource("2_8erm5")
@@ -378,46 +377,6 @@ size = Vector2(15, 38.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_tx1dd"]
 radius = 25.019993
 
-[sub_resource type="Curve" id="Curve_pu2lt"]
-_data = [Vector2(0, 0.19672126), 0.0, 0.0, 0, 0, Vector2(0.49999997, 0.5983606), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_r1ead"]
-curve = SubResource("Curve_pu2lt")
-
-[sub_resource type="Curve" id="Curve_ukyrk"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_7dp3o"]
-_limits = [-1.0, 1.0, 0.0, 1.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2578616, 1), 0.0, 0.0, 0, 0, Vector2(0.49999997, -1), 0.0, 0.0, 0, 0, Vector2(0.754717, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.032786846), 0.0, 0.0, 0, 0]
-point_count = 5
-
-[sub_resource type="Curve" id="Curve_h4iuc"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_78r0k"]
-curve_x = SubResource("Curve_ukyrk")
-curve_y = SubResource("Curve_7dp3o")
-curve_z = SubResource("Curve_h4iuc")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fd4e3"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(180, 90, 1)
-spread = 0.0
-initial_velocity_min = 30.0
-initial_velocity_max = 50.0
-directional_velocity_min = 19.999983
-directional_velocity_max = 49.99998
-directional_velocity_curve = SubResource("CurveXYZTexture_78r0k")
-gravity = Vector3(0, 0, 0)
-scale_min = 0.049999997
-scale_max = 0.049999997
-alpha_curve = SubResource("CurveTexture_r1ead")
-
 [node name="Player" type="CharacterBody2D" unique_id=779849852 groups=["Player"]]
 collision_mask = 6
 slide_on_ceiling = false
@@ -504,16 +463,3 @@ shape = SubResource("RectangleShape2D_3smsa")
 position = Vector2(22, -4)
 shape = SubResource("CircleShape2D_tx1dd")
 disabled = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1307764219]
-position = Vector2(-1, -38)
-amount = 4
-texture = ExtResource("11_gymyn")
-lifetime = 5.0
-fixed_fps = 60
-interpolate = false
-trail_enabled = true
-trail_lifetime = 1.0
-trail_sections = 96
-trail_section_subdivisions = 96
-process_material = SubResource("ParticleProcessMaterial_fd4e3")
