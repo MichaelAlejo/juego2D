@@ -2212,7 +2212,7 @@ sources/0 = SubResource("TileSetAtlasSource_8mnmb")
 sources/1 = SubResource("TileSetAtlasSource_koko0")
 sources/2 = SubResource("TileSetAtlasSource_lsb8r")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t6ver"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_on4kn"]
 texture = ExtResource("2_ys4pu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -3262,9 +3262,9 @@ texture = ExtResource("2_ys4pu")
 [sub_resource type="TileSet" id="TileSet_2nb4t"]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 3
-sources/0 = SubResource("TileSetAtlasSource_t6ver")
+sources/0 = SubResource("TileSetAtlasSource_on4kn")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jb51l"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70gml"]
 texture = ExtResource("3_h2ono")
 26:0/0 = 0
 27:0/0 = 0
@@ -4446,11 +4446,17 @@ texture = ExtResource("3_h2ono")
 47:45/0 = 0
 48:45/0 = 0
 51:45/0 = 0
+51:45/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 52:45/0 = 0
+52:45/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 53:45/0 = 0
+53:45/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 54:45/0 = 0
+54:45/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 55:45/0 = 0
+55:45/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 56:45/0 = 0
+56:45/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 58:45/0 = 0
 59:45/0 = 0
 4:46/0 = 0
@@ -4487,11 +4493,17 @@ texture = ExtResource("3_h2ono")
 47:46/0 = 0
 48:46/0 = 0
 51:46/0 = 0
+51:46/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 52:46/0 = 0
+52:46/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 53:46/0 = 0
+53:46/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 54:46/0 = 0
+54:46/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 55:46/0 = 0
+55:46/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 56:46/0 = 0
+56:46/0/modulate = Color(0.74122286, 0.7985352, 0.87957776, 1)
 58:46/0 = 0
 59:46/0 = 0
 4:47/0 = 0
@@ -4575,7 +4587,7 @@ texture = ExtResource("3_h2ono")
 62:60/0 = 0
 56:61/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2ono"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8va2t"]
 texture = ExtResource("4_ys4pu")
 0:0/0 = 0
 1:0/0 = 0
@@ -4686,7 +4698,7 @@ texture = ExtResource("4_ys4pu")
 4:13/0 = 0
 5:13/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_on4kn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ap3ea"]
 texture = ExtResource("5_h2ono")
 0:0/0 = 0
 1:0/0 = 0
@@ -4754,9 +4766,9 @@ texture = ExtResource("5_h2ono")
 7:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_dxsep"]
-sources/0 = SubResource("TileSetAtlasSource_jb51l")
-sources/1 = SubResource("TileSetAtlasSource_h2ono")
-sources/2 = SubResource("TileSetAtlasSource_on4kn")
+sources/0 = SubResource("TileSetAtlasSource_70gml")
+sources/1 = SubResource("TileSetAtlasSource_8va2t")
+sources/2 = SubResource("TileSetAtlasSource_ap3ea")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lexqi"]
 size = Vector2(1542, 20)
@@ -4780,7 +4792,7 @@ tile_set = SubResource("TileSet_2nb4t")
 
 [node name="Decoration" type="TileMapLayer" parent="Map" unique_id=1584926550]
 texture_filter = 1
-tile_map_data = PackedByteArray("AADr/+3/AAACAAoAAADr/+7/AAACAAsAAADr/+//AAACAAwAAADr//D/AAACAA0AAADr//L/AAACAA8AAADs/+3/AAADAAoAAADs/+7/AAADAAsAAADs/+//AAADAAwAAADs//D/AAADAA0AAADs//H/AAADAA4AAADs//L/AAADAA8AAADt/+3/AAAEAAoAAADt/+7/AAAEAAsAAADt/+//AAAEAAwAAADt//D/AAAEAA0AAADt//H/AAAEAA4AAADt//L/AAAEAA8AAADu/+3/AAAFAAoAAADu/+7/AAAFAAsAAADu/+//AAAFAAwAAADu//D/AAAFAA0AAADu//H/AAAFAA4AAADu//L/AAAFAA8AAADv/+3/AAAGAAoAAADv/+7/AAAGAAsAAADv/+//AAAGAAwAAADv//D/AAAGAA0AAADv//H/AAAGAA4AAADv//L/AAAGAA8AAADw/+3/AAAHAAoAAADw/+7/AAAHAAsAAADw/+//AAAHAAwAAADw//L/AAAHAA8AAADx//H/AAAIAA4AAADx//L/AAAIAA8AAADy//H/AAAJAA4AAADy//L/AAAJAA8AAAD4//z/AAALAAoAAAD4//3/AAALAAsAAAD4//7/AAALAAwAAAD5//z/AAAMAAoAAAD5//3/AAAMAAsAAAD5//7/AAAMAAwAAAD5////AAAMAA0AAAD6//z/AAANAAoAAAD6//3/AAANAAsAAAD6//7/AAANAAwAAAD7//z/AAAOAAoAAAD7//3/AAAOAAsAAAD7//7/AAANAAwAAAD8//z/AAAOAAoAAAD8//3/AAAOAAsAAAD8//7/AAAOAAwAAAD9//z/AAAPAAoAAAD9//3/AAAPAAsAAAD9//7/AAAPAAwAAAD9////AAAPAA0AAAAGAPz/AQACAAAAAAAIAPz/AQADAAAAAAAGAPv/AQAAAAIAAAAIAPv/AQADAAIAAAA2APv/AQAGAAQAAAA4APv/AgAEAAIAAAA5APv/AgAFAAIAAAA7APv/AQAAAAAAAAAlAPv/AAAxAAIAAAAmAPv/AAAyAAIAAAAmAPz/AAAyAAMAAAAnAPv/AAAzAAIAAAAnAPz/AAAzAAMAAAAoAPv/AAA0AAIAAAA=")
+tile_map_data = PackedByteArray("AADr/+3/AAACAAoAAADr/+7/AAACAAsAAADr/+//AAACAAwAAADr//D/AAACAA0AAADr//L/AAACAA8AAADs/+3/AAADAAoAAADs/+7/AAADAAsAAADs/+//AAADAAwAAADs//D/AAADAA0AAADs//H/AAADAA4AAADs//L/AAADAA8AAADt/+3/AAAEAAoAAADt/+7/AAAEAAsAAADt/+//AAAEAAwAAADt//D/AAAEAA0AAADt//H/AAAEAA4AAADt//L/AAAEAA8AAADu/+3/AAAFAAoAAADu/+7/AAAFAAsAAADu/+//AAAFAAwAAADu//D/AAAFAA0AAADu//H/AAAFAA4AAADu//L/AAAFAA8AAADv/+3/AAAGAAoAAADv/+7/AAAGAAsAAADv/+//AAAGAAwAAADv//D/AAAGAA0AAADv//H/AAAGAA4AAADv//L/AAAGAA8AAADw/+3/AAAHAAoAAADw/+7/AAAHAAsAAADw/+//AAAHAAwAAADw//L/AAAHAA8AAADx//H/AAAIAA4AAADx//L/AAAIAA8AAADy//H/AAAJAA4AAADy//L/AAAJAA8AAAD4//z/AAALAAoAAAD4//3/AAALAAsAAAD4//7/AAALAAwAAAD5//z/AAAMAAoAAAD5//3/AAAMAAsAAAD5//7/AAAMAAwAAAD5////AAAMAA0AAAD6//z/AAANAAoAAAD6//3/AAANAAsAAAD6//7/AAANAAwAAAD7//z/AAAOAAoAAAD7//3/AAAOAAsAAAD7//7/AAANAAwAAAD8//z/AAAOAAoAAAD8//3/AAAOAAsAAAD8//7/AAAOAAwAAAD9//z/AAAPAAoAAAD9//3/AAAPAAsAAAD9//7/AAAPAAwAAAD9////AAAPAA0AAAAGAPz/AQACAAAAAAAIAPz/AQADAAAAAAAGAPv/AQAAAAIAAAAIAPv/AQADAAIAAAA2APv/AQAGAAQAAAA4APv/AgAEAAIAAAA5APv/AgAFAAIAAAA7APv/AQAAAAAAAAAlAPv/AAAxAAIAAAAmAPv/AAAyAAIAAAAmAPz/AAAyAAMAAAAnAPv/AAAzAAIAAAAnAPz/AAAzAAMAAAAoAPv/AAA0AAIAAABrAP//AAAzAC0AAABrAAAAAAAzAC4AAABsAP//AAA0AC0AAABsAAAAAAA0AC4AAABtAP//AAA1AC0AAABtAAAAAAA1AC4AAABuAP//AAA2AC0AAABuAAAAAAA2AC4AAABvAP//AAA3AC0AAABvAAAAAAA3AC4AAABwAP//AAA4AC0AAABwAAAAAAA4AC4AAAA=")
 tile_set = SubResource("TileSet_dxsep")
 
 [node name="Label" type="Label" parent="Map" unique_id=574485982]

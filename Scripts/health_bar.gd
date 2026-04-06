@@ -10,6 +10,7 @@ func _ready():
 	max_value_amount = parent.health_max
 	min_value_amount = parent.health_min
 	
+@warning_ignore("unused_parameter")
 func _process(delta):
 	self.value = parent.health
 	if parent.health != max_value_amount:

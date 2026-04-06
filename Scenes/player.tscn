@@ -373,7 +373,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3smsa"]
-size = Vector2(15, 38.5)
+size = Vector2(15, 36.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tx1dd"]
 radius = 25.019993
@@ -432,7 +432,9 @@ zoom = Vector2(2, 2)
 visibility_layer = 2
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
-animation = &"5_attack"
+animation = &"1_idle"
+frame = 5
+frame_progress = 0.6998567
 
 [node name="HBoxContainer" type="Panel" parent="." unique_id=270632498]
 visible = false
@@ -495,7 +497,7 @@ offset_right = 280.0
 offset_bottom = -157.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802882654]
-position = Vector2(0.5, -2.75)
+position = Vector2(0.5, -1.75)
 shape = SubResource("RectangleShape2D_3smsa")
 
 [node name="DamageZone" type="Area2D" parent="." unique_id=2104969628]
