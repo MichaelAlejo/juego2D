@@ -4856,7 +4856,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="enemy" parent="Map" unique_id=392713156 instance=ExtResource("6_on4kn")]
-position = Vector2(2234, -36)
+position = Vector2(2234, -32)
 
 [node name="Player" parent="." unique_id=779849852 instance=ExtResource("5_70gml")]
 position = Vector2(2, -17)
