@@ -317,7 +317,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"5_attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -432,9 +432,44 @@ zoom = Vector2(2, 2)
 visibility_layer = 2
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
-animation = &"1_idle"
-frame = 5
-frame_progress = 0.6998567
+animation = &"5_attack"
+autoplay = "5_attack"
+frame = 4
+frame_progress = 1.0
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1407600684]
+position = Vector2(2, 12)
+
+[node name="HealthBar" parent="." unique_id=2086820887 instance=ExtResource("10_tx1dd")]
+offset_left = 160.0
+offset_top = -190.0
+offset_right = 280.0
+offset_bottom = -157.0
+value = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802882654]
+position = Vector2(0.5, -1.75)
+shape = SubResource("RectangleShape2D_3smsa")
+
+[node name="DamageZone" type="Area2D" parent="." unique_id=2104969628]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone" unique_id=1220290028]
+position = Vector2(22, -4)
+shape = SubResource("CircleShape2D_tx1dd")
+disabled = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1307764219]
+position = Vector2(-1, -38)
+amount = 4
+texture = ExtResource("11_gymyn")
+lifetime = 5.0
+fixed_fps = 60
+interpolate = false
+trail_enabled = true
+trail_lifetime = 1.0
+trail_sections = 96
+trail_section_subdivisions = 96
+process_material = SubResource("ParticleProcessMaterial_fd4e3")
 
 [node name="HBoxContainer" type="Panel" parent="." unique_id=270632498]
 visible = false
@@ -486,36 +521,3 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_f1ek2")
 expand_mode = 2
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1407600684]
-position = Vector2(2, 12)
-
-[node name="HealthBar" parent="." unique_id=2086820887 instance=ExtResource("10_tx1dd")]
-offset_left = 160.0
-offset_top = -190.0
-offset_right = 280.0
-offset_bottom = -157.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802882654]
-position = Vector2(0.5, -1.75)
-shape = SubResource("RectangleShape2D_3smsa")
-
-[node name="DamageZone" type="Area2D" parent="." unique_id=2104969628]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone" unique_id=1220290028]
-position = Vector2(22, -4)
-shape = SubResource("CircleShape2D_tx1dd")
-disabled = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1307764219]
-position = Vector2(-1, -38)
-amount = 4
-texture = ExtResource("11_gymyn")
-lifetime = 5.0
-fixed_fps = 60
-interpolate = false
-trail_enabled = true
-trail_lifetime = 1.0
-trail_sections = 96
-trail_section_subdivisions = 96
-process_material = SubResource("ParticleProcessMaterial_fd4e3")

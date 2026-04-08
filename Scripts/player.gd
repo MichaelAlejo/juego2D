@@ -10,9 +10,9 @@ const JUMP_VELOCITY = -300
 var isgrounded = true
 var spawn_position
 
-var attack: String
-var health = 50
-var health_max = 50
+var attack = null
+var health = 100
+var health_max = 100
 var health_min = 0
 
 func _ready():
@@ -40,35 +40,35 @@ func _physics_process(delta):
 	if direction != 0:
 		velocity.x = direction * SPEED
 		animated_sprite.flip_h = direction < 0
-		# Girar el DamageZone
-		deal_damage_zone.scale.x = direction 
+		deal_damage_zone.scale.x = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	# ANIMACIONES
-
-	if not is_on_floor() and !attack:
-
-		if velocity.y < 0:
-			if animated_sprite.animation != "3_jump":
-				animated_sprite.play("3_jump")
-
-		else:
-			if animated_sprite.animation != "4_fall":
-				animated_sprite.play("4_fall")
-
-	else:
-		if direction != 0:
-			if animated_sprite.animation != "2_move":
-				animated_sprite.play("2_move")
-
-		else:
-			if animated_sprite.animation != "1_idle":
-				animated_sprite.play("1_idle")
-	
-	if Input.is_action_just_pressed("left_mouse"):
+	# ATAQUE
+	if Input.is_action_just_pressed("left_mouse") and !attack:
 		attack = "5_attack"
-		handle_attack_animation("5_attack")
+		handle_attack_animation(attack)
+
+	# ANIMACIONES (solo si no está atacando)
+	if !attack:
+
+		if not is_on_floor():
+
+			if velocity.y < 0:
+				if animated_sprite.animation != "3_jump":
+					animated_sprite.play("3_jump")
+			else:
+				if animated_sprite.animation != "4_fall":
+					animated_sprite.play("4_fall")
+
+		else:
+			if direction != 0:
+				if animated_sprite.animation != "2_move":
+					animated_sprite.play("2_move")
+			else:
+				if animated_sprite.animation != "1_idle":
+					animated_sprite.play("1_idle")
+
 	set_damage(attack)
 	move_and_slide()
 
@@ -80,6 +80,9 @@ func handle_attack_animation(attack):
 	if attack:
 		animated_sprite.play("5_attack")
 		toggle_damage_collisions(attack)
+		await animated_sprite.animation_finished
+		self.attack = null
+
 
 func toggle_damage_collisions(attack):
 	var damage_zone_collision = deal_damage_zone.get_node("CollisionShape2D")
@@ -90,7 +93,7 @@ func toggle_damage_collisions(attack):
 	await get_tree().create_timer(wait_time).timeout
 	damage_zone_collision.disabled = true
 	
-func 	set_damage(attack):
+func set_damage(attack):
 	var damage_to_deal: int
 	if attack == "5_attack":
 		damage_to_deal = 15
