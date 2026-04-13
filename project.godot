@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Parkour Quest (TdR)"
+config/name="Plataform Jumping"
 run/main_scene="uid://ctgiyewsbtmf2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://c7nr6842k43ga"
