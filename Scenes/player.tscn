@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dwd02m4xo66td" path="res://UI/corazon.png" id="9_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://b71tfe6yqepp4" path="res://Scenes/health_bar.tscn" id="10_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://ctryibxapay2m" path="res://UI/viento.png" id="11_gymyn"]
-[ext_resource type="PackedScene" uid="uid://mc68b24fdkwl" path="res://Scenes/pause_menu.tscn" id="12_pu2lt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
 atlas = ExtResource("2_8erm5")
@@ -522,11 +521,3 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_f1ek2")
 expand_mode = 2
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1627126257]
-scale = Vector2(0.5, 0.5)
-transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
-
-[node name="PauseMenu" parent="CanvasLayer" unique_id=1423104590 instance=ExtResource("12_pu2lt")]
-scale = Vector2(2, 2)
-size_flags_horizontal = 4

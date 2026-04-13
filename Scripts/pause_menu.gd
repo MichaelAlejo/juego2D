@@ -1,8 +1,5 @@
 extends Control
 
-func _ready():
-	$AnimationPlayer.play("RESET")
-
 func resume():
 	get_tree().paused = false
 	$AnimationPlayer.play_backwards("blur")
@@ -20,11 +17,9 @@ func testEsc():
 func _on_resume_pressed() -> void:
 	resume()
 
-
 func _on_restart_pressed() -> void:
 	resume()
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
