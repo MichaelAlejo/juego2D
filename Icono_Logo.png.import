@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4o4daay78755"
-path="res://.godot/imported/IWvpl.jpg-1495bcfff7664a06ef8c98aecbc748a5.ctex"
+uid="uid://dif7r76dlud34"
+path="res://.godot/imported/Icono_Logo.png-386f51d59c70899b371755e3caa29d0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://IWvpl.jpg"
-dest_files=["res://.godot/imported/IWvpl.jpg-1495bcfff7664a06ef8c98aecbc748a5.ctex"]
+source_file="res://Icono_Logo.png"
+dest_files=["res://.godot/imported/Icono_Logo.png-386f51d59c70899b371755e3caa29d0f.ctex"]
 
 [params]
 

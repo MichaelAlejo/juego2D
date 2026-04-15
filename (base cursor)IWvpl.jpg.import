@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7fbbcocolaju"
-path="res://.godot/imported/IWvpl-removebg-preview(1).png-e24bad5011729d0180dc913d7e6bed9e.ctex"
+uid="uid://b4o4daay78755"
+path="res://.godot/imported/(base cursor)IWvpl.jpg-8bf27b6fa9c67263f8e460f40fea01a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://IWvpl-removebg-preview(1).png"
-dest_files=["res://.godot/imported/IWvpl-removebg-preview(1).png-e24bad5011729d0180dc913d7e6bed9e.ctex"]
+source_file="res://(base cursor)IWvpl.jpg"
+dest_files=["res://.godot/imported/(base cursor)IWvpl.jpg-8bf27b6fa9c67263f8e460f40fea01a8.ctex"]
 
 [params]
 
