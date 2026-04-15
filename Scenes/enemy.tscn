@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://m8n8rhvrag1j" path="res://Sprites/Enemigo Seta/1 - walk.png" id="2_afpow"]
 [ext_resource type="Texture2D" uid="uid://ma2ql0jy6sov" path="res://Sprites/Enemigo Seta/2 - dead.png" id="3_afpow"]
 [ext_resource type="PackedScene" uid="uid://b71tfe6yqepp4" path="res://Scenes/health_bar.tscn" id="4_287tu"]
+[ext_resource type="Texture2D" uid="uid://cvqi07hrth7ru" path="res://Sprites/Enemigo Seta/3 - hit.png" id="4_0830c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ij6vw"]
 radius = 18.110771
@@ -100,6 +101,26 @@ region = Rect2(1040, 0, 80, 64)
 atlas = ExtResource("3_afpow")
 region = Rect2(1120, 0, 80, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_iatxd"]
+atlas = ExtResource("4_0830c")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqxsh"]
+atlas = ExtResource("4_0830c")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0whn2"]
+atlas = ExtResource("4_0830c")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx1xr"]
+atlas = ExtResource("4_0830c")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n85mp"]
+atlas = ExtResource("4_0830c")
+region = Rect2(320, 0, 80, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qnedo"]
 animations = [{
 "frames": [{
@@ -180,6 +201,26 @@ animations = [{
 "loop": true,
 "name": &"2 - dead",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iatxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqxsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0whn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx1xr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n85mp")
+}],
+"loop": true,
+"name": &"3 - hit",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_287tu"]
@@ -199,7 +240,7 @@ shape = SubResource("CircleShape2D_ij6vw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1179830]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qnedo")
-animation = &"1 - walk"
+animation = &"3 - hit"
 
 [node name="HealthBar" parent="." unique_id=2086820887 instance=ExtResource("4_287tu")]
 offset_left = -21.0

@@ -4,11 +4,15 @@ extends CharacterBody2D
 var direction = -1
 var dead = false
 
+# VIDA
 var health = 50
 var health_max = 50
 var health_min = 0
-var taking_damage = 0
-var is_roaming = 0
+
+var taking_damage = false
+var invulnerable = false
+
+@export var invulnerability_time = 0.5
 
 
 func _physics_process(delta):
@@ -16,34 +20,72 @@ func _physics_process(delta):
 	if dead:
 		return
 
+	# Movimiento
 	velocity.x = speed * direction
 	move_and_slide()
 
-	# DETECTAR COLISION CON PLAYER
-	for i in get_slide_collision_count():
+	# =========================
+	# 💥 DETECTAR PLAYER (COLISION REAL)
+	# =========================
+	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var body = collision.get_collider()
 
-		if body.has_method("die"):
-			body.die()
+		if body and body.has_method("die"):
+			body.die(10)  # 👈 daño por enemigo (respawn + pierde vida)
 
+	# Cambiar dirección al chocar pared
 	if is_on_wall():
 		direction *= -1
 		$AnimatedSprite2D.flip_h = direction > 0
 
-	if $AnimatedSprite2D.animation != "walk":
+	# Animación caminar
+	if !taking_damage and $AnimatedSprite2D.animation != "1 - walk":
 		$AnimatedSprite2D.play("1 - walk")
 
 
+# =========================
+# 🗡️ RECIBIR DAÑO DEL PLAYER
+# =========================
 func _on_seta_hitbox_area_entered(area):
+	if dead:
+		return
+		
 	if area == Global.playerDamageZone:
 		var damage = Global.playerDamageAmount
 		take_damage(damage)
-	
+
+
 func take_damage(damage):
+	if invulnerable or dead:
+		return
+
 	health -= damage
 	taking_damage = true
+	invulnerable = true
+
+	print(str(self), "current health is ", health)
+
+	# Animación de daño
+	$AnimatedSprite2D.play("3 - hit")
+
 	if health <= 0:
-		health = 0
-		dead = true	
-	print(str(self), "current health is", health)
+		die()
+	else:
+		await get_tree().create_timer(invulnerability_time).timeout
+		invulnerable = false
+		taking_damage = false
+
+
+# =========================
+# ☠️ MUERTE DEL ENEMIGO
+# =========================
+func die():
+	dead = true
+	velocity = Vector2.ZERO
+	
+	$AnimatedSprite2D.play("2 - dead")
+
+	await $AnimatedSprite2D.animation_finished
+	
+	queue_free()

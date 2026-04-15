@@ -441,10 +441,10 @@ frame_progress = 1.0
 position = Vector2(2, 12)
 
 [node name="HealthBar" parent="." unique_id=2086820887 instance=ExtResource("10_tx1dd")]
-offset_left = 160.0
+offset_left = 192.0
 offset_top = -190.0
 offset_right = 280.0
-offset_bottom = -157.0
+offset_bottom = -167.0
 value = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1802882654]
