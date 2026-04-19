@@ -25,15 +25,19 @@ func _physics_process(delta):
 	move_and_slide()
 
 	# =========================
-	# 💥 DETECTAR PLAYER (COLISION REAL)
+	# 💥 DAÑO Y EMPUJON
 	# =========================
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var body = collision.get_collider()
 
-		if body and body.has_method("die"):
-			body.die(10)  # 👈 daño por enemigo (respawn + pierde vida)
-
+		if body and body.has_method("take_damage"):
+			body.take_damage(20) # <-- Daño que hace el enemigo
+			
+			# 2. Aplicamos el empujón
+			if body.has_method("apply_knockback"):
+				body.apply_knockback(global_position)
+		
 	# Cambiar dirección al chocar pared
 	if is_on_wall():
 		direction *= -1

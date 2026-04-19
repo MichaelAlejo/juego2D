@@ -83,8 +83,11 @@ func take_damage(amount: int):
 	health -= amount
 	health = clamp(health, health_min, health_max)
 
-	# Respawn inmediato siempre
-	die(false)
+	if health <= health_min:
+		die(false) # Solo muere y respawnea si la vida llega a 0
+	else:
+		# Aquí es donde el knockback es más útil: el jugador sigue vivo pero sale despedido
+		start_invulnerability()
 
 
 func die(by_fall: bool):
@@ -99,8 +102,11 @@ func die(by_fall: bool):
 	
 	health = max(health_min, health)
 
-	# Respawn instantáneo
-	global_position = respawn_point.global_position
+	# Respawn instantáneo (Si has agarrado un checkpoint te spawnea en el checkpoint
+	if Checkpoint.last_position != null:
+		global_position = Checkpoint.last_position
+	else:
+		global_position = respawn_point.global_position
 	velocity = Vector2.ZERO
 	
 	# Si se queda sin vida total → reset
@@ -153,3 +159,13 @@ func set_damage(attack):
 		damage_to_deal = 15
 		
 	Global.playerDamageAmount = damage_to_deal
+
+# Knockback para empujar al jugador
+func apply_knockback(source_position: Vector2):
+	var knockback_direction = -1 if source_position.x > global_position.x else 1
+	
+	# Cambiamos la velocidad directamente. 
+	velocity.x = knockback_direction * 500 
+	velocity.y = -250
+	
+	move_and_slide()
