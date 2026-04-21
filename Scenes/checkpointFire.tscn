@@ -258,6 +258,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6g2rg"]
 size = Vector2(20, 97)
 
+[sub_resource type="Gradient" id="Gradient_78ryv"]
+offsets = PackedFloat32Array(0, 0.6807229)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_106pi"]
+gradient = SubResource("Gradient_78ryv")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
 [node name="Checkpoint" type="Area2D" unique_id=1428200180]
 collision_layer = 0
 script = ExtResource("1_aqfe5")
@@ -270,5 +280,17 @@ animation = &"blue_fire"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=534163067]
 position = Vector2(0, -8.5)
 shape = SubResource("RectangleShape2D_6g2rg")
+
+[node name="PointLightOrange" type="PointLight2D" parent="." unique_id=1095966801]
+color = Color(1, 0.6156863, 0.21960784, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_106pi")
+texture_scale = 2.0
+
+[node name="PointLightBlue" type="PointLight2D" parent="." unique_id=1001465933]
+color = Color(0.3026906, 0.76365614, 0.9703943, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_106pi")
+texture_scale = 2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
