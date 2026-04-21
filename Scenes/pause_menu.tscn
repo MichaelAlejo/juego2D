@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhqol8cpqmqlk" path="res://Scripts/pause_menu.gd" id="1_1och7"]
 [ext_resource type="Shader" uid="uid://cef0nvi2hlh8g" path="res://Scripts/pause_menu.gdshader" id="1_k0w1u"]
-[ext_resource type="FontFile" uid="uid://sohciwor7xii" path="res://Daydream DEMO.otf" id="2_1och7"]
+[ext_resource type="FontFile" uid="uid://sohciwor7xii" path="res://UI/Daydream DEMO.otf" id="2_1och7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bpi0q"]
 shader = ExtResource("1_k0w1u")

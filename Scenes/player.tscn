@@ -237,7 +237,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_p1odr")
 }],
 "loop": true,
-"name": &"1_idle",
+"name": &"1 - idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -266,7 +266,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_11gg7")
 }],
 "loop": true,
-"name": &"2_move",
+"name": &"2 - move",
 "speed": 5.0
 }, {
 "frames": [{
@@ -283,7 +283,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_gymyn")
 }],
 "loop": true,
-"name": &"3_jump",
+"name": &"3 - jump",
 "speed": 5.0
 }, {
 "frames": [{
@@ -297,7 +297,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_xwi16")
 }],
 "loop": true,
-"name": &"4_fall",
+"name": &"4 - fall",
 "speed": 5.0
 }, {
 "frames": [{
@@ -317,7 +317,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_nmr2m")
 }],
 "loop": false,
-"name": &"5_attack",
+"name": &"5 - attack",
 "speed": 10.0
 }, {
 "frames": [{
@@ -334,7 +334,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5x828")
 }],
 "loop": true,
-"name": &"6_hit_marker",
+"name": &"6 - hit",
 "speed": 5.0
 }, {
 "frames": [{
@@ -369,7 +369,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_lisdf")
 }],
 "loop": true,
-"name": &"7_death",
+"name": &"7 - death",
 "speed": 5.0
 }]
 
@@ -377,7 +377,7 @@ animations = [{
 size = Vector2(15, 36.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tx1dd"]
-radius = 17.117243
+radius = 11.045361
 
 [sub_resource type="Curve" id="Curve_pu2lt"]
 _data = [Vector2(0, 0.19672126), 0.0, 0.0, 0, 0, Vector2(0.49999997, 0.5983606), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -433,9 +433,7 @@ zoom = Vector2(2, 2)
 visibility_layer = 2
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
-animation = &"5_attack"
-frame = 4
-frame_progress = 1.0
+animation = &"5 - attack"
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1407600684]
 position = Vector2(2, 12)
@@ -456,7 +454,7 @@ collision_layer = 2
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone" unique_id=1220290028]
-position = Vector2(22, -4)
+position = Vector2(19, -1)
 shape = SubResource("CircleShape2D_tx1dd")
 disabled = true
 

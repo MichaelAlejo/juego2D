@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b71tfe6yqepp4" path="res://Scenes/health_bar.tscn" id="4_287tu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ij6vw"]
-radius = 18.110771
+radius = 19.026299
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auwsv"]
 atlas = ExtResource("2_0830c")
@@ -198,7 +198,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bx1xr")
 }],
-"loop": true,
+"loop": false,
 "name": &"2 - dead",
 "speed": 5.0
 }, {
@@ -234,15 +234,13 @@ script = ExtResource("1_1f0kj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1398648033]
 light_mask = 129
 visibility_layer = 129
-position = Vector2(-1, 14)
+position = Vector2(0, 14)
 shape = SubResource("CircleShape2D_ij6vw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1179830]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qnedo")
-animation = &"3 - hit"
-frame = 2
-frame_progress = 0.8848654
+animation = &"2 - dead"
 
 [node name="HealthBar" parent="." unique_id=2086820887 instance=ExtResource("4_287tu")]
 offset_left = -21.0

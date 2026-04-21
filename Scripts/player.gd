@@ -48,22 +48,22 @@ func _physics_process(delta):
 		attack = "5_attack"
 		handle_attack_animation(attack)
 
+	# ❗ No interrumpir animación de hit
 	if !attack and !is_dead:
-
 		if not is_on_floor():
 			if velocity.y < 0:
-				if animated_sprite.animation != "3_jump":
-					animated_sprite.play("3_jump")
+				if animated_sprite.animation != "3 - jump":
+					animated_sprite.play("3 - jump")
 			else:
-				if animated_sprite.animation != "4_fall":
-					animated_sprite.play("4_fall")
+				if animated_sprite.animation != "4 - fall":
+					animated_sprite.play("4 - fall")
 		else:
 			if direction != 0:
-				if animated_sprite.animation != "2_move":
-					animated_sprite.play("2_move")
+				if animated_sprite.animation != "2 - move":
+					animated_sprite.play("2 - move")
 			else:
-				if animated_sprite.animation != "1_idle":
-					animated_sprite.play("1_idle")
+				if animated_sprite.animation != "1 - idle":
+					animated_sprite.play("1 - idle")
 
 	move_and_slide()
 
@@ -78,6 +78,22 @@ func take_damage(amount: int):
 		
 	health -= amount
 	health = clamp(health, health_min, health_max)
+
+	# 🔥 Estado hit
+	attack = "hit"
+	invulnerable = true
+
+	# ▶️ Animación de daño
+	animated_sprite.play("6 - hit")
+
+	# Parar movimiento
+	velocity = Vector2.ZERO
+
+	# ⏱️ Esperar (ajusta si quieres)
+	await get_tree().create_timer(0.3).timeout
+
+	# 🔓 Volver a estado normal
+	attack = null
 
 	if health <= health_min:
 		die(false)
@@ -108,7 +124,6 @@ func die(by_fall: bool):
 
 
 func start_invulnerability():
-	invulnerable = true
 	await get_tree().create_timer(1.0).timeout
 	invulnerable = false
 
@@ -124,7 +139,7 @@ func heal(amount: int):
 
 func handle_attack_animation(attack):
 	if attack:
-		animated_sprite.play("5_attack")
+		animated_sprite.play("5 - attack")
 		toggle_damage_collisions(attack)
 		await animated_sprite.animation_finished
 		self.attack = null
@@ -143,7 +158,7 @@ func toggle_damage_collisions(attack):
 
 
 # =========================
-# ⚡ DAÑO (SISTEMA LIMPIO)
+# ⚡ DAÑO 
 # =========================
 
 func get_damage():
@@ -153,7 +168,7 @@ func get_damage():
 
 
 # =========================
-# KNOCKBACK
+# 💥 KNOCKBACK
 # =========================
 
 func apply_knockback(source_position: Vector2):
