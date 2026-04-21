@@ -20,6 +20,7 @@ var is_dead = false
 var invulnerable = false
 var respawn_health_penalty = 10
 
+
 func _physics_process(delta):
 	if isgrounded == false and is_on_floor() == true:
 		var instance = dust.instantiate()
@@ -28,15 +29,12 @@ func _physics_process(delta):
 	 
 	isgrounded = is_on_floor()
 
-	# Gravedad
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Saltar
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Movimiento
 	var direction = Input.get_axis("move_left", "move_right")
 
 	if direction != 0:
@@ -46,12 +44,10 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	# ATAQUE
 	if Input.is_action_just_pressed("left_mouse") and !attack and !is_dead:
 		attack = "5_attack"
 		handle_attack_animation(attack)
 
-	# ANIMACIONES
 	if !attack and !is_dead:
 
 		if not is_on_floor():
@@ -69,8 +65,8 @@ func _physics_process(delta):
 				if animated_sprite.animation != "1_idle":
 					animated_sprite.play("1_idle")
 
-	set_damage(attack)
 	move_and_slide()
+
 
 # =========================
 # ❤️ VIDA
@@ -95,17 +91,14 @@ func die(by_fall: bool):
 		
 	is_dead = true
 
-	# penalización opcional por caída
 	if by_fall:
 		health -= respawn_health_penalty
 
 	health = max(health, health_min)
 
-	# 🔥 RESPawn SIEMPRE en spawn de la escena
 	global_position = respawn_point.global_position
 	velocity = Vector2.ZERO
 
-	# reset vida si muere
 	if health <= health_min:
 		health = health_max
 
@@ -123,6 +116,7 @@ func start_invulnerability():
 func heal(amount: int):
 	health += amount
 	health = clamp(health, health_min, health_max)
+
 
 # =========================
 # ⚔️ ATAQUE
@@ -148,16 +142,18 @@ func toggle_damage_collisions(attack):
 	damage_zone_collision.disabled = true
 
 
-func set_damage(attack):
-	var damage_to_deal: int
-	
+# =========================
+# ⚡ DAÑO (SISTEMA LIMPIO)
+# =========================
+
+func get_damage():
 	if attack == "5_attack":
-		damage_to_deal = 15
-		
-	Global.playerDamageAmount = damage_to_deal
+		return 20
+	return 0
+
 
 # =========================
-# 💥 KNOCKBACK
+# KNOCKBACK
 # =========================
 
 func apply_knockback(source_position: Vector2):

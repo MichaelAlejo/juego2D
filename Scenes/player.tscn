@@ -377,7 +377,7 @@ animations = [{
 size = Vector2(15, 36.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tx1dd"]
-radius = 25.019993
+radius = 17.117243
 
 [sub_resource type="Curve" id="Curve_pu2lt"]
 _data = [Vector2(0, 0.19672126), 0.0, 0.0, 0, 0, Vector2(0.49999997, 0.5983606), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -434,7 +434,6 @@ visibility_layer = 2
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
 animation = &"5_attack"
-autoplay = "5_attack"
 frame = 4
 frame_progress = 1.0
 
@@ -452,7 +451,9 @@ value = 100.0
 position = Vector2(0.5, -1.75)
 shape = SubResource("RectangleShape2D_3smsa")
 
-[node name="DamageZone" type="Area2D" parent="." unique_id=2104969628]
+[node name="DamageZone" type="Area2D" parent="." unique_id=2104969628 groups=["player_attack"]]
+collision_layer = 2
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone" unique_id=1220290028]
 position = Vector2(22, -4)

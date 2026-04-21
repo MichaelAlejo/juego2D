@@ -5,8 +5,8 @@ var direction = -1
 var dead = false
 
 # VIDA
-var health = 100
-var health_max = 100
+var health = 70
+var health_max = 70
 var health_min = 0
 
 var taking_damage = false
@@ -54,10 +54,13 @@ func _physics_process(delta):
 func _on_seta_hitbox_area_entered(area):
 	if dead:
 		return
+
+	if area.is_in_group("player_attack"):
+		var player = area.get_parent()
 		
-	if area == Global.playerDamageZone:
-		var damage = Global.playerDamageAmount
-		take_damage(damage)
+		if player.has_method("get_damage"):
+			var damage = player.get_damage()
+			take_damage(damage)
 
 
 func take_damage(damage):
