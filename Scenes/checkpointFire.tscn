@@ -283,13 +283,13 @@ shape = SubResource("RectangleShape2D_6g2rg")
 
 [node name="PointLightOrange" type="PointLight2D" parent="." unique_id=1095966801]
 color = Color(1, 0.6156863, 0.21960784, 1)
-energy = 0.5
+energy = 0.3
 texture = SubResource("GradientTexture2D_106pi")
 texture_scale = 2.0
 
 [node name="PointLightBlue" type="PointLight2D" parent="." unique_id=1001465933]
-color = Color(0.3026906, 0.76365614, 0.9703943, 1)
-energy = 0.5
+color = Color(0.6055576, 0.8632831, 0.9935754, 1)
+energy = 0.3
 texture = SubResource("GradientTexture2D_106pi")
 texture_scale = 2.0
 

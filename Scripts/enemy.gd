@@ -99,7 +99,6 @@ func take_damage(damage):
 		invulnerable = false
 		taking_damage = false
 
-
 # =========================
 # ☠️ MUERTE
 # =========================

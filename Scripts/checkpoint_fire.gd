@@ -6,7 +6,7 @@ func _ready():
 	$PointLightBlue.visible = false
 
 func _on_body_entered(body: Node2D):
-	Checkpoint.last_position = global_position + Vector2(0, -20)
+	Checkpoint.last_position = global_position + Vector2(0, 0)
 	$AnimatedSprite2D.play("blue_fire")
 	$PointLightOrange.visible = false
 	$PointLightBlue.visible = true
