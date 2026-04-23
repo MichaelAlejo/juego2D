@@ -4903,6 +4903,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=923161346]
+visible = false
 energy = 0.3
 blend_mode = 1
 
@@ -4913,6 +4914,7 @@ position = Vector2(2234, -32)
 position = Vector2(2, -17)
 
 [node name="PointLightBlue" type="PointLight2D" parent="Player" unique_id=1236678848]
+visible = false
 energy = 0.35
 texture = SubResource("GradientTexture2D_8va2t")
 texture_scale = 5.0
