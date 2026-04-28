@@ -163,7 +163,7 @@ func toggle_damage_collisions(attack):
 
 func get_damage():
 	if attack == "5_attack":
-		return 20
+		return 25
 	return 0
 
 

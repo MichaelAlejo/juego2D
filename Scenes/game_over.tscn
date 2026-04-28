@@ -41,7 +41,7 @@ offset_right = 366.0
 offset_bottom = 516.0
 theme_override_fonts/font = ExtResource("2_8fo1c")
 theme_override_font_sizes/font_size = 40
-text = "RETRY"
+text = "retry"
 
 [node name="Menu" type="Button" parent="." unique_id=926522415]
 offset_left = 751.0

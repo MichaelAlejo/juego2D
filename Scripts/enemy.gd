@@ -5,8 +5,8 @@ var direction = -1
 var dead = false
 
 # VIDA
-var health = 70
-var health_max = 70
+var health = 100
+var health_max = 100
 var health_min = 0
 
 var taking_damage = false

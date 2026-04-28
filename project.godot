@@ -13,7 +13,7 @@ config_version=5
 config/name="Plataform Jumping"
 run/main_scene="uid://ctgiyewsbtmf2"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://dif7r76dlud34"
+config/icon="uid://cy1o6tnlp2y7d"
 
 [autoload]
 
