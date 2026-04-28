@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cwn2d1ap5i74a" path="res://Scenes/player.tscn" id="5_70gml"]
 [ext_resource type="Texture2D" uid="uid://c6su65dxktrjj" path="res://Sprites/Keyboard Extras.png" id="5_h2ono"]
 [ext_resource type="Script" uid="uid://btsmsb427vw28" path="res://Scripts/death_zone.gd" id="6_8va2t"]
-[ext_resource type="PackedScene" uid="uid://cohidmsokf6bb" path="res://Scenes/enemy.tscn" id="6_on4kn"]
+[ext_resource type="PackedScene" uid="uid://cohidmsokf6bb" path="res://Scenes/enemy_mush.tscn" id="6_on4kn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mnmb"]
 texture = ExtResource("1_p1f1o")
@@ -4772,16 +4772,6 @@ sources/0 = SubResource("TileSetAtlasSource_70gml")
 sources/1 = SubResource("TileSetAtlasSource_8va2t")
 sources/2 = SubResource("TileSetAtlasSource_ap3ea")
 
-[sub_resource type="Gradient" id="Gradient_78ryv"]
-offsets = PackedFloat32Array(0, 0.6807229)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_8va2t"]
-gradient = SubResource("Gradient_78ryv")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 1)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lexqi"]
 size = Vector2(2423.4253, 20)
 
@@ -4902,22 +4892,11 @@ text = "Pause mode"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=923161346]
-visible = false
-energy = 0.3
-blend_mode = 1
-
 [node name="enemy" parent="." unique_id=392713156 instance=ExtResource("6_on4kn")]
 position = Vector2(2234, -32)
 
 [node name="Player" parent="." unique_id=779849852 instance=ExtResource("5_70gml")]
 position = Vector2(2, -17)
-
-[node name="PointLightBlue" type="PointLight2D" parent="Player" unique_id=1236678848]
-visible = false
-energy = 0.35
-texture = SubResource("GradientTexture2D_8va2t")
-texture_scale = 5.0
 
 [node name="DeathZone" type="Area2D" parent="." unique_id=77391063]
 position = Vector2(1103, 35)
