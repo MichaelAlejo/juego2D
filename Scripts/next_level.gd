@@ -2,6 +2,9 @@ extends Area2D
 
 const FILE_BEGIN = "res://Scenes/map"
 
+func _ready():
+	$AnimatedSprite2D.play("orange_fire")
+
 func _on_body_entered(body: CharacterBody2D) -> void:
 	if body.is_in_group("Player"):
 			var current_scene_file = get_tree().current_scene.scene_file_path
