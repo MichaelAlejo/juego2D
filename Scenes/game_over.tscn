@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b5pj0etg77sxi"]
+
+[ext_resource type="Script" uid="uid://71qsvmqu3v61" path="res://Scenes/game_over.gd" id="1_ojehl"]
+[ext_resource type="FontFile" uid="uid://sohciwor7xii" path="res://UI/Daydream DEMO.otf" id="2_8fo1c"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=1860958336]
+script = ExtResource("1_ojehl")
+
+[node name="Panel" type="Panel" parent="." unique_id=1922683158]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="Label" parent="." unique_id=21002907]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -183.0
+offset_right = 58.0
+offset_bottom = -148.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.9721473, 0.9714131, 0.99185413, 1)
+theme_override_fonts/font = ExtResource("2_8fo1c")
+theme_override_font_sizes/font_size = 100
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="." unique_id=121386935]
+offset_left = 200.0
+offset_top = 463.0
+offset_right = 366.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("2_8fo1c")
+theme_override_font_sizes/font_size = 40
+text = "RETRY"
+
+[node name="Menu" type="Button" parent="." unique_id=926522415]
+offset_left = 751.0
+offset_top = 462.0
+offset_right = 919.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("2_8fo1c")
+theme_override_font_sizes/font_size = 40
+text = "Menu"
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
