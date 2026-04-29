@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cf4m15y8wyd1x" path="res://Sprites/Fire/Red Fire/Fire30.png" id="61_bost8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1piei"]
-radius = 30.0
+radius = 22.278284
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_13i14"]
 animations = [{
@@ -129,7 +129,7 @@ animations = [{
 "texture": ExtResource("61_bost8")
 }],
 "loop": true,
-"name": &"orange_fire",
+"name": &"fire",
 "speed": 10.0
 }]
 
@@ -152,14 +152,16 @@ shape = SubResource("CircleShape2D_1piei")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=230048070]
 texture_filter = 1
-position = Vector2(0, -24)
+position = Vector2(0, -22)
+scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_13i14")
-animation = &"orange_fire"
+animation = &"fire"
 
 [node name="PointLightOrange" type="PointLight2D" parent="." unique_id=1152282036]
+position = Vector2(0, -1)
 color = Color(1, 0.6156863, 0.21960784, 1)
-energy = 0.3
+energy = 0.5
 texture = SubResource("GradientTexture2D_up6xc")
-texture_scale = 2.0
+texture_scale = 7.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

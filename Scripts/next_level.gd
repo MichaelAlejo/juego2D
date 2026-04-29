@@ -3,7 +3,7 @@ extends Area2D
 const FILE_BEGIN = "res://Scenes/map"
 
 func _ready():
-	$AnimatedSprite2D.play("orange_fire")
+	$AnimatedSprite2D.play("fire")
 
 func _on_body_entered(body: CharacterBody2D) -> void:
 	if body.is_in_group("Player"):
