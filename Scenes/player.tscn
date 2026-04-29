@@ -368,7 +368,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lisdf")
 }],
-"loop": true,
+"loop": false,
 "name": &"7 - death",
 "speed": 5.0
 }]
@@ -433,7 +433,7 @@ zoom = Vector2(2, 2)
 visibility_layer = 2
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xuaoq")
-animation = &"5 - attack"
+animation = &"7 - death"
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1407600684]
 position = Vector2(2, 12)

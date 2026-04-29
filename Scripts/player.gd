@@ -17,6 +17,7 @@ var health_max = 100
 var health_min = 0
 
 var is_dead = false
+var is_dying = false # 🆕 NUEVO: evita que se active la muerte 2 veces
 var invulnerable = false
 var respawn_health_penalty = 10
 
@@ -72,7 +73,7 @@ func _physics_process(delta):
 # =========================
 
 func take_damage(amount: int):
-	if invulnerable or is_dead:
+	if invulnerable or is_dead or is_dying:
 		return
 		
 	health -= amount
@@ -89,12 +90,34 @@ func take_damage(amount: int):
 
 	attack = null
 
-	# 💀 GAME OVER
+	# 💀 GAME OVER (AHORA CON ANIMACIÓN)
 	if health <= health_min:
-		Global.last_scene_path = get_tree().current_scene.scene_file_path
-		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		die_sequence() # 🆕 en vez de cambiar escena instantáneo
 	else:
 		start_invulnerability()
+
+
+# 🆕 NUEVA FUNCIÓN: MUERTE CON ANIMACIÓN
+func die_sequence():
+	if is_dying:
+		return
+
+	is_dying = true
+	is_dead = true
+	velocity = Vector2.ZERO
+
+	# ⛔ detener acciones
+	attack = null
+
+	# 🎬 reproducir animación de muerte
+	animated_sprite.play("7 - death") # ⚠️ asegúrate que este nombre existe en tu animación
+
+	# esperar a que termine la animación
+	await animated_sprite.animation_finished
+
+	# 🧠 cambiar a game over
+	Global.last_scene_path = get_tree().current_scene.scene_file_path
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
 
 func die(by_fall: bool):
