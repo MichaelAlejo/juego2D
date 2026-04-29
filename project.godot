@@ -28,6 +28,10 @@ mouse_cursor/custom_image="uid://dacjxvd054fiu"
 
 project/assembly_name="Parkour Quest (TdR)"
 
+[editor]
+
+version_control/autoload_on_startup=true
+
 [file_customization]
 
 folder_colors={

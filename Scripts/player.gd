@@ -48,7 +48,6 @@ func _physics_process(delta):
 		attack = "5_attack"
 		handle_attack_animation(attack)
 
-	# ❗ No interrumpir animación de hit
 	if !attack and !is_dead:
 		if not is_on_floor():
 			if velocity.y < 0:
@@ -79,24 +78,21 @@ func take_damage(amount: int):
 	health -= amount
 	health = clamp(health, health_min, health_max)
 
-	# 🔥 Estado hit
 	attack = "hit"
 	invulnerable = true
 
-	# ▶️ Animación de daño
 	animated_sprite.play("6 - hit")
 
-	# Parar movimiento
 	velocity = Vector2.ZERO
 
-	# ⏱️ Esperar (ajusta si quieres)
 	await get_tree().create_timer(0.3).timeout
 
-	# 🔓 Volver a estado normal
 	attack = null
 
+	# 💀 GAME OVER
 	if health <= health_min:
-		die(false)
+		Global.last_scene_path = get_tree().current_scene.scene_file_path
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 	else:
 		start_invulnerability()
 
@@ -156,10 +152,6 @@ func toggle_damage_collisions(attack):
 	await get_tree().create_timer(wait_time).timeout
 	damage_zone_collision.disabled = true
 
-
-# =========================
-# ⚡ DAÑO 
-# =========================
 
 func get_damage():
 	if attack == "5_attack":
