@@ -1,28 +1,53 @@
 extends CharacterBody2D
 
+# =========================
+# ⚙️ CONSTANTES
+# =========================
 const SPEED = 155
 const JUMP_VELOCITY = -300
 
+# =========================
+# 🔗 REFERENCIAS
+# =========================
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var dust = preload("res://Scenes/dust.tscn")
 @onready var deal_damage_zone = $DamageZone
 @onready var respawn_point = get_parent().get_node("RespawnPoint")
 
+# =========================
+# 🧠 VARIABLES
+# =========================
 var isgrounded = true
 var attack = null
 
-# VIDA
-var health = 100
-var health_max = 100
+# =========================
+# ❤️ VIDA
+# =========================
+var health = 30
+var health_max = 30
 var health_min = 0
 
 var is_dead = false
-var is_dying = false # 🆕 NUEVO: evita que se active la muerte 2 veces
+var is_dying = false
 var invulnerable = false
 var respawn_health_penalty = 10
 
-
+# =========================
+# 🔄 LOOP PRINCIPAL
+# =========================
 func _physics_process(delta):
+
+	# 💀 MUERTO → solo física (caer y quedarse quieto)
+	if is_dead:
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+		else:
+			velocity = Vector2.ZERO
+		
+		move_and_slide()
+		return
+
+	# 🌫️ polvo al aterrizar
 	if isgrounded == false and is_on_floor() == true:
 		var instance = dust.instantiate()
 		instance.global_position = $Marker2D.global_position
@@ -45,11 +70,11 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	if Input.is_action_just_pressed("left_mouse") and !attack and !is_dead:
+	if Input.is_action_just_pressed("left_mouse") and !attack:
 		attack = "5_attack"
 		handle_attack_animation(attack)
 
-	if !attack and !is_dead:
+	if !attack:
 		if not is_on_floor():
 			if velocity.y < 0:
 				if animated_sprite.animation != "3 - jump":
@@ -67,11 +92,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
 # =========================
-# ❤️ VIDA
+# ❤️ DAÑO
 # =========================
-
 func take_damage(amount: int):
 	if invulnerable or is_dead or is_dying:
 		return
@@ -79,90 +102,95 @@ func take_damage(amount: int):
 	health -= amount
 	health = clamp(health, health_min, health_max)
 
+	# 💀 MUERTE
+	if health <= health_min:
+		velocity = Vector2.ZERO  # 🔥 evita que el knockback arrastre la muerte
+		die_sequence()
+		return
+
+	# 🩸 HIT NORMAL
 	attack = "hit"
 	invulnerable = true
 
 	animated_sprite.play("6 - hit")
-
 	velocity = Vector2.ZERO
 
 	await get_tree().create_timer(0.3).timeout
 
 	attack = null
+	start_invulnerability()
 
-	# 💀 GAME OVER (AHORA CON ANIMACIÓN)
-	if health <= health_min:
-		die_sequence() # 🆕 en vez de cambiar escena instantáneo
-	else:
-		start_invulnerability()
-
-
-# 🆕 NUEVA FUNCIÓN: MUERTE CON ANIMACIÓN
-func die_sequence():
+# =========================
+# 💀 MUERTE
+# =========================
+func die_sequence(wait_for_floor: bool = true, play_animation: bool = true):
 	if is_dying:
 		return
 
 	is_dying = true
 	is_dead = true
-	velocity = Vector2.ZERO
-
-	# ⛔ detener acciones
 	attack = null
 
-	# 🎬 reproducir animación de muerte
-	animated_sprite.play("7 - death") # ⚠️ asegúrate que este nombre existe en tu animación
+	# 🪨 esperar suelo
+	if wait_for_floor:
+		while not is_on_floor():
+			await get_tree().physics_frame
 
-	# esperar a que termine la animación
-	await animated_sprite.animation_finished
+	velocity = Vector2.ZERO
 
-	# 🧠 cambiar a game over
+	# 🎬 animación muerte
+	if play_animation:
+		animated_sprite.play("7 - death")
+		await animated_sprite.animation_finished
+
 	Global.last_scene_path = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
-
+# =========================
+# 🔁 RESPAWN
+# =========================
 func die(by_fall: bool):
 	if is_dead:
 		return
-		
-	is_dead = true
 
 	if by_fall:
 		health -= respawn_health_penalty
 
 	health = max(health, health_min)
 
-	global_position = respawn_point.global_position
-	velocity = Vector2.ZERO
-
 	if health <= health_min:
-		health = health_max
+		die_sequence(false, false)
+		return
+
+	is_dead = true
+
+	if Checkpoint.last_position != null:
+		global_position = Checkpoint.last_position
+	else:
+		global_position = respawn_point.global_position
+
+	velocity = Vector2.ZERO
 
 	is_dead = false
 
 	start_invulnerability()
 
-
+# =========================
+# 🛡️ INVULNERABILIDAD
+# =========================
 func start_invulnerability():
 	await get_tree().create_timer(1.0).timeout
 	invulnerable = false
 
-
-func heal(amount: int):
-	health += amount
-	health = clamp(health, health_min, health_max)
-
-
 # =========================
 # ⚔️ ATAQUE
 # =========================
-
 func handle_attack_animation(attack):
 	if attack:
 		animated_sprite.play("5 - attack")
 		toggle_damage_collisions(attack)
 		await animated_sprite.animation_finished
 		self.attack = null
-
 
 func toggle_damage_collisions(attack):
 	var damage_zone_collision = deal_damage_zone.get_node("CollisionShape2D")
@@ -175,21 +203,19 @@ func toggle_damage_collisions(attack):
 	await get_tree().create_timer(wait_time).timeout
 	damage_zone_collision.disabled = true
 
-
 func get_damage():
 	if attack == "5_attack":
 		return 25
 	return 0
 
-
 # =========================
-# 💥 KNOCKBACK
+# 💥 KNOCKBACK (FUERTE RESTAURADO)
 # =========================
-
 func apply_knockback(source_position: Vector2):
+	if is_dead or is_dying:
+		return
+
 	var knockback_direction = -1 if source_position.x > global_position.x else 1
 	
-	velocity.x = knockback_direction * 500 
+	velocity.x = knockback_direction * 500
 	velocity.y = -250
-	
-	move_and_slide()

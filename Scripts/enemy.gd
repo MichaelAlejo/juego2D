@@ -1,16 +1,26 @@
+
 extends CharacterBody2D
 
+# =========================
+# ⚙️ MOVIMIENTO
+# =========================
 @export var speed = 50
 var direction = -1
+
+# =========================
+# ☠️ ESTADO GENERAL
+# =========================
 var dead = false
 
-# VIDA
+# =========================
+# ❤️ VIDA
+# =========================
 var health = 100
 var health_max = 100
 var health_min = 0
 
-var taking_damage = false
-var invulnerable = false
+var taking_damage = false  # evita spam de animación hit
+var invulnerable = false   # i-frames tras recibir daño
 
 @export var invulnerability_time = 0.5
 
@@ -19,37 +29,46 @@ var invulnerable = false
 # 🟢 INICIO
 # =========================
 func _ready():
-	# 🔥 Forzar animación inicial
+	# Animación inicial del enemigo
 	$AnimatedSprite2D.play("1 - walk")
 
 
+# =========================
+# 🔄 LOOP PRINCIPAL
+# =========================
 func _physics_process(delta):
 
 	# =========================
-	# ☠️ SI ESTÁ MUERTO
+	# ☠️ ENEMIGO MUERTO
 	# =========================
 	if dead:
 		velocity = Vector2.ZERO
 		return
 
-	# Movimiento
+	# =========================
+	# 🚶 MOVIMIENTO
+	# =========================
 	velocity.x = speed * direction
 	move_and_slide()
 
 	# =========================
-	# 💥 DAÑO Y EMPUJON
+	# 💥 ATAQUE AL PLAYER POR CONTACTO
 	# =========================
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
 		var body = collision.get_collider()
 
+		# Si colisiona con el player
 		if body and body.has_method("take_damage"):
 			body.take_damage(20)
 
+			# Knockback si el player lo soporta
 			if body.has_method("apply_knockback"):
 				body.apply_knockback(global_position)
 
-	# Cambiar dirección al chocar pared
+	# =========================
+	# ↔️ CAMBIO DE DIRECCIÓN
+	# =========================
 	if is_on_wall():
 		direction *= -1
 		$AnimatedSprite2D.flip_h = direction > 0
@@ -63,22 +82,24 @@ func _physics_process(delta):
 
 
 # =========================
-# 🗡️ RECIBIR DAÑO
+# 🗡️ DETECCIÓN DE GOLPE DEL PLAYER
 # =========================
 func _on_seta_hitbox_area_entered(area):
 	if dead:
 		return
 
+	# Solo detecta ataques del player
 	if area.is_in_group("player_attack"):
 		var player = area.get_parent()
 
+		# Obtiene daño del jugador si existe
 		if player.has_method("get_damage"):
 			var damage = player.get_damage()
 			take_damage(damage)
 
 
 # =========================
-# 💥 TAKE DAMAGE
+# 💥 RECIBIR DAÑO
 # =========================
 func take_damage(damage):
 	if invulnerable or dead:
@@ -90,14 +111,18 @@ func take_damage(damage):
 
 	print("Vida enemigo:", health)
 
+	# Animación de hit
 	$AnimatedSprite2D.play("3 - hit")
 
+	# Si muere
 	if health <= 0:
 		die()
 	else:
+		# cooldown de invulnerabilidad
 		await get_tree().create_timer(invulnerability_time).timeout
 		invulnerable = false
 		taking_damage = false
+
 
 # =========================
 # ☠️ MUERTE
@@ -108,13 +133,14 @@ func die():
 
 	print("Enemigo muerto")
 
-	# 🔒 Desactivar colisiones de forma segura
+	# Desactiva colisiones para evitar bugs
 	if has_node("CollisionShape2D"):
 		$CollisionShape2D.disabled = true
 
 	if has_node("Area2D"):
 		$Area2D.set_deferred("monitoring", false)
 
+	# Animación de muerte
 	$AnimatedSprite2D.play("2 - dead")
 
 	await $AnimatedSprite2D.animation_finished
